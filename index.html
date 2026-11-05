@@ -174,36 +174,78 @@ body{background:var(--shp-paper);color:var(--shp-ink)}
 footer{margin-top:2rem}
 @media(max-width:900px){.comparison-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-band:after{right:-8%;opacity:.35}}
 @media(max-width:640px){.hero-inner{padding-top:2.3rem;padding-bottom:2rem}.hero-inner h1{font-size:2.2rem}.hero-band:after{display:none}.section-heading{align-items:start;flex-direction:column}.comparison-cards,#gift-guides .grid{grid-template-columns:1fr}.comparison-card{min-height:0}.hdr-nav{gap:1rem}}
-</style><style>.guide-photo{display:block;width:100%;height:150px;object-fit:cover;border-radius:.7rem;margin-bottom:.9rem;background:#e8f5f2}.guide-card{overflow:hidden}.guide-card h3{font-size:1rem}</style></head>
+</style><style>.guide-photo{display:block;width:100%;height:150px;object-fit:cover;border-radius:.7rem;margin-bottom:.9rem;background:#e8f5f2}.guide-card{overflow:hidden}.guide-card h3{font-size:1rem}</style><style>
+/* SmartHomePicks screenshot-led homepage layout; content, SEO metadata and scripts remain intact. */
+:root{--shp-ink:#0c2038;--shp-teal:#008f83;--shp-teal-dark:#006f68;--shp-mint:#e4f5f2;--shp-line:#dce5eb;--shp-muted:#536579}
+html{scroll-behavior:smooth} body{background:#fff;color:var(--shp-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.hdr{max-width:1400px;min-height:56px;padding:.45rem 1.1rem;display:flex;flex-wrap:nowrap;gap:1.5rem;align-items:center}
+.hdr>a{display:flex;align-items:center;gap:.38rem;font-size:1.42rem;font-weight:850;letter-spacing:-.045em;color:#0c2038}
+.brand-mark{display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:.55rem;background:var(--shp-teal);color:white;font-size:1.7rem;line-height:1}
+.hdr-nav{order:initial;width:auto;display:flex;gap:1.7rem;overflow:visible;padding:0;white-space:nowrap;font-size:.86rem;color:#101827;flex:1;justify-content:center}
+.hdr-nav a{padding:.65rem 0;font-weight:650;border-bottom:2px solid transparent}.hdr-nav a:first-child,.hdr-nav a:hover{color:var(--shp-teal);border-color:var(--shp-teal)}
+.hdr-search{order:initial;flex:0 1 330px;max-width:330px;margin-left:auto;gap:0;border:1px solid #cbd5df;border-radius:.65rem;overflow:hidden}
+.hdr-search input{border:0;border-radius:0;padding:.65rem .8rem;font-size:.78rem}.hdr-search button{background:var(--shp-teal);color:white;border:0;border-radius:0;padding:0 .95rem;font-size:1.25rem}
+.hero-band{min-height:230px;position:relative;border:0;background:#f5f1ed url('images/hero-kitchen.webp') center right/auto 100% no-repeat;display:flex;align-items:center}
+.hero-band:after{content:"";position:absolute;inset:0 38% 0 0;background:linear-gradient(90deg,#fff 0%,#fffefa 64%,#fffefa00 100%);pointer-events:none}
+.hero-inner{z-index:1;width:100%;max-width:1400px!important;padding:1.3rem 1.1rem!important;text-align:left}
+.hero-inner h1{max-width:570px;font-size:clamp(2rem,3vw,2.7rem);line-height:1.06;letter-spacing:-.04em;color:#0c2038}
+.hero-inner>p{max-width:510px;margin-top:.55rem;font-size:1.05rem;line-height:1.45;color:#13243a}
+.hero-trust{display:flex;gap:1.8rem;align-items:center;flex-wrap:wrap;margin-top:.9rem;padding:0;list-style:none}
+.hero-trust li{display:flex;align-items:center;gap:.55rem;max-width:155px;font-size:.82rem;line-height:1.25;color:#0c2038;font-weight:550}
+.trust-icon{display:grid;place-items:center;flex:none;width:2.1rem;height:2.1rem;border:2px solid var(--shp-teal);border-radius:50%;color:var(--shp-teal);font-size:1.3rem;font-weight:700}
+.category-strip{max-width:1400px;margin:0 auto;padding:.85rem 1.1rem .45rem;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.55rem}
+.category-tile{display:flex;min-width:0;min-height:118px;flex-direction:column;align-items:center;justify-content:space-between;gap:.25rem;padding:.35rem .4rem .5rem;border:1px solid #edf1f4;border-radius:.7rem;background:linear-gradient(135deg,#f6f8fa,#eef4f5);text-align:center;font-size:.78rem;line-height:1.2;font-weight:600;color:#0c2038;transition:transform .18s,border-color .18s}
+.category-tile:hover{transform:translateY(-2px);border-color:#9ccfc7}.category-tile img{width:100%;height:76px;object-fit:contain;mix-blend-mode:multiply}
+.home-layout{max-width:1400px;padding:0 1.1rem;display:grid;grid-template-columns:minmax(0,1fr) 255px;gap:1.25rem;align-items:start}
+.home-main{min-width:0}.home-main>section{max-width:none!important;margin:0!important;padding:1rem 0!important}
+.home-sidebar{min-width:0;padding-top:.7rem}.home-sidebar #featured{display:block;padding:0!important;margin:0!important}
+#comparison-hub{padding-top:.55rem!important}.section-heading{align-items:center;margin-bottom:.55rem}.section-heading h2{font-size:1.45rem;letter-spacing:-.035em;color:#0c2038}.section-heading p{font-size:.84rem;color:#18304b;margin-top:.15rem}.section-heading .eyebrow{display:none}.section-heading>a{font-size:.82rem}
+.comparison-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem}.comparison-card{min-height:190px;padding:.65rem;border-radius:.65rem;box-shadow:none;background:#fff;border-color:#dce5eb}.comparison-art{height:88px;margin-bottom:.45rem;border-radius:.5rem;font-size:2.2rem}.comparison-card h3{font-size:.88rem;line-height:1.2}.comparison-card p{font-size:.75rem;line-height:1.35;margin:.3rem 0 .5rem;color:#1b2d42}.comparison-card>span:last-child{font-size:.76rem}
+#gift-guides{padding-top:.1rem!important}#gift-guides h2{font-size:1.45rem;font-weight:800;letter-spacing:-.03em}#gift-guides>p{font-size:.84rem;margin-top:.15rem;color:#18304b}
+#gift-guides .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;margin-top:.55rem!important}
+.guide-card{min-height:140px;display:grid;grid-template-columns:36% 1fr;grid-template-rows:auto 1fr auto;column-gap:.7rem;padding:.35rem;border-radius:.6rem;min-width:0}
+.guide-photo{grid-row:1/4;width:100%;height:100%;min-height:128px;object-fit:cover;margin:0;border-radius:.35rem}.guide-card h3{font-size:.82rem;line-height:1.28}.guide-card p{font-size:.72rem;line-height:1.35;margin:.25rem 0;color:#1c2d41}.guide-read{font-size:.76rem}
+#featured .top-disclosure{font-size:.72rem;line-height:1.4;padding:.55rem .65rem;margin-bottom:.6rem!important;border-radius:.55rem}
+#featured h2{font-size:1.08rem;color:#0c2038}#featured>div.flex{align-items:center}#featured>p.mt-1{font-size:.7rem;line-height:1.35}
+#featured .fp-grid{grid-template-columns:1fr;gap:.5rem;margin-top:.55rem!important}
+#featured .fp{position:relative;min-height:86px;padding:.55rem .55rem .55rem 78px;border-radius:.55rem;box-shadow:none;justify-content:flex-start}
+#featured .fp:before{content:"✦";position:absolute;left:.5rem;top:.55rem;width:62px;height:62px;border-radius:.45rem;background:linear-gradient(145deg,#eef3f5,#dce8e9);display:grid;place-items:center;color:#0b8f82;font-size:1.5rem}
+#featured .fp:nth-of-type(2):before{content:"◫"}#featured .fp:nth-of-type(3):before{content:"✂"}#featured .fp:nth-of-type(4):before{content:"◉"}#featured .fp:nth-of-type(5):before{content:"◌"}#featured .fp:nth-of-type(6):before{content:"⌂"}
+#featured .fp>p:first-child{font-size:.64rem}#featured .fp h3{font-size:.75rem;line-height:1.25;margin-top:.12rem}#featured .fp p:nth-of-type(2){font-size:.67rem;line-height:1.3;margin-top:.15rem}#featured .fp-cta{font-size:.68rem;padding:.34rem .45rem;margin-top:.35rem;border-radius:.4rem;align-self:flex-start;min-width:110px}
+#finder{padding-top:.75rem!important}#finder>div{padding:1rem!important;border-radius:.75rem;box-shadow:none}#finder h2{font-size:1rem}#browse{padding-top:.6rem!important}#browse h2,#results{font-size:1.3rem!important}#browse .catgrid>div{padding:.8rem!important}
+#grid .card{border-radius:.75rem}
+footer{margin-top:1.25rem;background:#006b68!important;color:#fff!important;border:0!important}footer>div{max-width:1400px!important;padding:1.1rem!important;color:#e8f7f5!important}footer .flinks{justify-content:center;gap:.4rem 1.1rem}footer .flinks a,footer strong{color:#fff!important}footer p{text-align:center;color:#d8efec}
+@media(max-width:1050px){.hdr{gap:.75rem}.hdr-nav{gap:.85rem}.home-layout{grid-template-columns:minmax(0,1fr) 225px}.comparison-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.category-strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.hdr{flex-wrap:wrap;padding:.65rem 1rem}.hdr>a{font-size:1.25rem}.hdr-nav{order:3;width:100%;justify-content:flex-start;overflow-x:auto;gap:1.25rem}.hdr-search{flex:1 1 180px;max-width:none}.hero-band{min-height:245px;background-position:62% center;background-size:auto 100%}.hero-band:after{inset:0 15% 0 0;background:linear-gradient(90deg,#fff 0%,#fffefaed 72%,transparent 100%)}.hero-inner h1{font-size:2rem;max-width:430px}.hero-inner>p{font-size:.92rem;max-width:400px}.hero-trust{gap:.65rem}.hero-trust li{font-size:.7rem;max-width:115px}.trust-icon{width:1.7rem;height:1.7rem}.category-strip{grid-template-columns:repeat(4,minmax(0,1fr));padding:.65rem .8rem}.category-tile{min-height:100px;font-size:.7rem}.category-tile img{height:60px}.home-layout{display:flex;flex-direction:column;padding:0 .9rem;gap:.2rem}.home-main,.home-sidebar{width:100%}.home-sidebar{order:-1;padding-top:.2rem}.home-sidebar #featured{padding:0!important}.home-sidebar #featured .fp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-sidebar #featured .fp{padding-left:66px;min-height:80px}.home-sidebar #featured .fp:before{width:52px;height:52px}.home-sidebar #featured .top-disclosure{margin-top:.3rem}.comparison-cards{grid-template-columns:repeat(2,minmax(0,1fr))}#gift-guides .grid{grid-template-columns:1fr}.guide-card{min-height:125px}.guide-photo{min-height:116px}}
+@media(max-width:430px){.category-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-band{background-position:65% center}.hero-band:after{inset:0 0 0 0;background:linear-gradient(90deg,#fff 0%,#fffefaeb 83%,#fffefa70 100%)}.hero-inner h1{font-size:1.8rem}.hero-trust li{max-width:100px}.comparison-cards{grid-template-columns:1fr}.home-sidebar #featured .fp-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.comparison-card,.guide-card,.category-tile{transition:none}}
+</style></head>
 <body class="bg-stone-50 text-ink antialiased">
 <a class="skip" href="#main">Skip to content</a>
 <header class="bg-white border-b border-stone-200">
 <div class="hdr">
-<a class="font-bold text-lg tracking-tight whitespace-nowrap" href="./">SmartHome<span class="text-accent">Picks</span></a>
-<nav aria-label="Main" class="hdr-nav">
-<a data-setcat="kitchen" href="#results">Kitchen Gadgets</a>
-<a data-setcat="smart" href="#results">Smart Home</a>
-<a href="compare/">Compare</a>
-<a href="#gift-guides">Buying Guides</a>
-<a href="about/">About Us</a>
-</nav>
+<a class="font-bold text-lg tracking-tight whitespace-nowrap" href="./"><span aria-hidden="true" class="brand-mark">⌂</span>SmartHome<span class="text-accent">Picks</span></a>
+<nav aria-label="Main" class="hdr-nav"><a href="./">Home</a><a href="compare/">Compare</a><a href="#gift-guides">Buying Guides</a><a href="#browse">Categories</a><a href="about/">About</a></nav>
 <form class="hdr-search" id="hform" role="search">
 <label class="sr" for="hq">Search products</label>
-<input autocomplete="off" id="hq" placeholder="Search picks" type="search"/>
-<button type="submit">Search</button>
+<input autocomplete="off" id="hq" placeholder="Search products, guides, or topics…" type="search"/>
+<button aria-label="Search" type="submit">⌕</button>
 </form>
 </div>
 </header>
 <main id="main">
-<section class="hero-band">
-<div class="hero-inner max-w-6xl mx-auto px-4">
-<h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Practical Kitchen Gadgets &amp; Smart Home Picks</h1>
-<p class="mt-4 text-stone-600 text-base sm:text-lg max-w-xl mx-auto">Honest product comparisons and useful buying guides to help you choose the right products for your home.</p>
-<p class="mt-6"><a class="btn btn-link" href="#results">Explore our picks</a></p>
-<ul class="mt-6 flex flex-wrap gap-2 justify-center text-xs text-stone-600"><li class="hero-pill">Real-world buying advice</li><li class="hero-pill">Side-by-side comparisons</li><li class="hero-pill">Practical picks for everyday living</li></ul>
-</div>
-</section>
-<section aria-labelledby="finder-h" class="max-w-6xl mx-auto px-4 py-8" id="finder">
+<section class="hero-band"><div class="hero-inner max-w-6xl mx-auto px-4"><h1>Practical Kitchen Gadgets &amp; Smart Home Picks</h1><p>Real-world recommendations to make cooking easier, your home smarter, and everyday life more convenient.</p><ul aria-label="Our approach" class="hero-trust"><li><span aria-hidden="true" class="trust-icon">✓</span><span>Curated top picks</span></li><li><span aria-hidden="true" class="trust-icon">◇</span><span>Plain, honest buying notes</span></li><li><span aria-hidden="true" class="trust-icon">⌂</span><span>From kitchen to smart home</span></li></ul></div></section><nav aria-label="Shop by category" class="category-strip"><a class="category-tile" href="compare/"><img alt="" height="70" loading="lazy" src="images/category-1.webp" width="150"/><span>Air Fryers &amp; Ovens</span></a><a class="category-tile" href="compare/#smart-plugs"><img alt="" height="70" loading="lazy" src="images/category-2.webp" width="150"/><span>Smart Plugs &amp; Energy</span></a><a class="category-tile" href="#results"><img alt="" height="70" loading="lazy" src="images/category-3.webp" width="150"/><span>Food Choppers &amp; Prep Tools</span></a><a class="category-tile" href="compare/#video-doorbells"><img alt="" height="70" loading="lazy" src="images/category-4.webp" width="150"/><span>Video Doorbells &amp; Home Security</span></a><a class="category-tile" href="compare/#multi-cookers"><img alt="" height="70" loading="lazy" src="images/category-5.webp" width="150"/><span>Multi-Cookers &amp; Rice Cookers</span></a><a class="category-tile" href="#results"><img alt="" height="70" loading="lazy" src="images/category-6.webp" width="150"/><span>Smart Thermostats &amp; Home Comfort</span></a><a class="category-tile" href="#results"><img alt="" height="70" loading="lazy" src="images/category-7.webp" width="150"/><span>Kitchen Scales &amp; Nutrition</span></a></nav><div class="home-layout max-w-6xl mx-auto"><div class="home-main"><section aria-labelledby="comparison-hub-title" class="" id="comparison-hub">
+<div class="section-heading"><div><p class="eyebrow">Choose with confidence</p><h2 id="comparison-hub-title">Popular Comparisons</h2><p>Start with the features that matter most, then explore the picks in each category.</p></div><a href="compare/">View air fryer comparison →</a></div>
+<div class="comparison-cards">
+<a class="comparison-card" href="compare/"><span aria-hidden="true" class="comparison-art art-air">♨</span><h3>Air Fryer Ovens</h3><p>Compare capacity, countertop footprint and cooking style.</p><span>Compare air fryers →</span></a>
+<a class="comparison-card" href="compare/#smart-plugs"><span aria-hidden="true" class="comparison-art art-plug">▣</span><h3>Smart Plugs</h3><p>Explore app-based control, energy monitoring and simple remote outlets.</p><span>Explore smart plug picks →</span></a>
+<a class="comparison-card" href="compare/#video-doorbells"><span aria-hidden="true" class="comparison-art art-door">◉</span><h3>Video Doorbells</h3><p>Review wired and wireless styles, video features and storage questions.</p><span>Explore doorbell picks →</span></a>
+<a class="comparison-card" href="compare/#multi-cookers"><span aria-hidden="true" class="comparison-art art-cook">◌</span><h3>Rice &amp; Multi-Cookers</h3><p>Compare dedicated rice cooking with more versatile countertop cookers.</p><span>Explore cooker picks →</span></a>
+</div></section><section aria-labelledby="gg-h" class="" id="gift-guides">
+<h2 class="text-2xl font-bold" id="gg-h">Popular Buying Guides</h2>
+<p class="mt-2 text-stone-600">Shopping for someone else, or short on counter space? Start with a guide.</p>
+<div class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><a class="guide-card" href="guides/air-fryer-buying-guide/"><img alt="Air Fryer Buying Guide: Size, Style &amp; Features to Check" class="guide-photo" height="900" loading="lazy" src="images/guides/air-fryer.webp" width="900"/><h3>Air Fryer Buying Guide: Size, Style &amp; Features to Check</h3><p>Choose a basket or oven-style model by household size, counter space and the food you cook.</p><span class="guide-read">Read the guide →</span></a><a class="guide-card" href="guides/smart-plug-buying-guide/"><img alt="Smart Plug Buying Guide: Wi-Fi, Matter &amp; Energy Monitoring" class="guide-photo" height="900" loading="lazy" src="images/guides/smart-plug.webp" width="900"/><h3>Smart Plug Buying Guide: Wi-Fi, Matter &amp; Energy Monitoring</h3><p>Know which compatibility details, safety ratings and monitoring features matter before buying.</p><span class="guide-read">Read the guide →</span></a><a class="guide-card" href="guides/small-kitchen-prep-tools/"><img alt="Small-Kitchen Prep Tools: What Earns Its Counter Space?" class="guide-photo" height="900" loading="lazy" src="images/guides/food-prep.webp" width="900"/><h3>Small-Kitchen Prep Tools: What Earns Its Counter Space?</h3><p>Compare compact prep tools by storage, cleanup, capacity and how often you will use them.</p><span class="guide-read">Read the guide →</span></a></div>
+</section><section aria-labelledby="finder-h" class="" id="finder">
 <div class="bg-white border border-stone-200 rounded-2xl p-5 sm:p-7 shadow-sm">
 <h2 class="font-semibold text-lg" id="finder-h"><label for="q">What’s bugging you at home?</label></h2>
 <form class="mt-3 flex gap-2" id="sform" role="search">
@@ -216,31 +258,7 @@ footer{margin-top:2rem}
 <h3 class="mt-5 font-semibold text-sm text-stone-600">Category and price level</h3>
 <div aria-label="Choose a category or price level" class="mt-2 flex flex-wrap gap-2" role="group"><button aria-pressed="false" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" data-id="kitchen" data-key="cat" type="button">Kitchen gadgets</button><button aria-pressed="false" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" data-id="smart" data-key="cat" type="button">Smart home appliances</button><button aria-pressed="false" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" data-id="budget" data-key="tier" type="button">Budget-friendly</button><button aria-pressed="false" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" data-id="value" data-key="tier" type="button">Mid-range</button><button aria-pressed="false" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" data-id="premium" data-key="tier" type="button">Premium</button></div>
 </div>
-</section>
-<section aria-labelledby="comparison-hub-title" class="max-w-6xl mx-auto px-4 py-8" id="comparison-hub">
-<div class="section-heading"><div><p class="eyebrow">Choose with confidence</p><h2 id="comparison-hub-title">Popular Product Comparisons</h2><p>Start with the features that matter most, then explore the picks in each category.</p></div><a href="compare/">View air fryer comparison →</a></div>
-<div class="comparison-cards">
-<a class="comparison-card" href="compare/"><span aria-hidden="true" class="comparison-art art-air">♨</span><h3>Air Fryer Ovens</h3><p>Compare capacity, countertop footprint and cooking style.</p><span>Compare air fryers →</span></a>
-<a class="comparison-card" href="compare/#smart-plugs"><span aria-hidden="true" class="comparison-art art-plug">▣</span><h3>Smart Plugs</h3><p>Explore app-based control, energy monitoring and simple remote outlets.</p><span>Explore smart plug picks →</span></a>
-<a class="comparison-card" href="compare/#video-doorbells"><span aria-hidden="true" class="comparison-art art-door">◉</span><h3>Video Doorbells</h3><p>Review wired and wireless styles, video features and storage questions.</p><span>Explore doorbell picks →</span></a>
-<a class="comparison-card" href="compare/#multi-cookers"><span aria-hidden="true" class="comparison-art art-cook">◌</span><h3>Rice &amp; Multi-Cookers</h3><p>Compare dedicated rice cooking with more versatile countertop cookers.</p><span>Explore cooker picks →</span></a>
-</div></section><section aria-labelledby="feat-h" class="max-w-6xl mx-auto px-4 pb-6" id="featured">
-<p class="top-disclosure mb-5"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Our Amazon links are affiliate links, so we may earn a commission at no extra cost to you. <a href="affiliate-disclosure/">Read the full disclosure</a>.</p>
-<div class="flex flex-wrap items-baseline justify-between gap-2">
-<h2 class="text-2xl font-bold" id="feat-h">Featured Picks</h2>
-<a class="text-sm font-semibold text-accent hover:underline" href="compare/">Compare air fryer specs →</a>
-</div>
-<p class="mt-1 text-sm text-stone-600">The Budget-friendly pick from six of our categories. Browse everything below.</p>
-<div class="fp-grid mt-3">
-<div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">Chefman 4-Quart Compact Air Fryer</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A compact way to try air frying.</p><a class="fp-cta" data-asin="B0CNY1F31S" href="https://www.amazon.com/dp/B0CNY1F31S?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Chefman 4-Quart Compact Air Fryer</span></a></div>
-<div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A 10-cup rice cooker with 18 functions.</p><a class="fp-cta" data-asin="B0BD4PRBVZ" href="https://www.amazon.com/dp/B0BD4PRBVZ?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</span></a></div>
-<div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">BLACK+DECKER 1.5-Cup Electric Food Chopper</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A small electric chopper for quick prep.</p><a class="fp-cta" data-asin="B01LYR6VNZ" href="https://www.amazon.com/dp/B01LYR6VNZ?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – BLACK+DECKER 1.5-Cup Electric Food Chopper</span></a></div>
-<div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">See how much power a plugged-in device uses.</p><a class="fp-cta" data-asin="B0H7WJQ8N7" href="https://www.amazon.com/dp/B0H7WJQ8N7?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</span></a></div>
-<div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">BOIFUN Wireless Video Doorbell Camera, 2K HD</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A wireless doorbell camera with 2K video.</p><a class="fp-cta" data-asin="B0CZLFJKYB" href="https://www.amazon.com/dp/B0CZLFJKYB?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – BOIFUN Wireless Video Doorbell Camera, 2K HD</span></a></div>
-<div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">Sensi ST55 Smart Thermostat (Wi-Fi)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A Wi-Fi thermostat from Sensi.</p><a class="fp-cta" data-asin="B01NB1OB0I" href="https://www.amazon.com/dp/B01NB1OB0I?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Sensi ST55 Smart Thermostat (Wi-Fi)</span></a></div>
-</div>
-</section>
-<section aria-labelledby="cats-h" class="max-w-6xl mx-auto px-4 pb-12" id="browse">
+</section><section aria-labelledby="cats-h" class="" id="browse">
 <h2 class="text-2xl font-bold" id="cats-h">Browse by Category</h2>
 <div class="mt-4 grid gap-3 sm:grid-cols-3 catgrid">
 <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
@@ -718,12 +736,26 @@ footer{margin-top:2rem}
 </div>
 <div class="hidden text-center text-stone-600 py-12" id="empty"><p>Nothing matches that combination yet.</p><button class="mt-3 text-sm font-semibold text-accent hover:underline" id="emptyReset" type="button">Clear search and filters</button></div>
 <button class="btn2 hidden" id="more" type="button">Show more picks</button>
-</section>
-<section aria-labelledby="gg-h" class="max-w-6xl mx-auto px-4 pb-4" id="gift-guides">
-<h2 class="text-2xl font-bold" id="gg-h">Popular Buying Guides</h2>
-<p class="mt-2 text-stone-600">Shopping for someone else, or short on counter space? Start with a guide.</p>
-<div class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><a class="guide-card" href="guides/air-fryer-buying-guide/"><img alt="Air Fryer Buying Guide: Size, Style &amp; Features to Check" class="guide-photo" height="900" loading="lazy" src="images/guides/air-fryer.webp" width="900"/><h3>Air Fryer Buying Guide: Size, Style &amp; Features to Check</h3><p>Choose a basket or oven-style model by household size, counter space and the food you cook.</p><span class="guide-read">Read the guide →</span></a><a class="guide-card" href="guides/smart-plug-buying-guide/"><img alt="Smart Plug Buying Guide: Wi-Fi, Matter &amp; Energy Monitoring" class="guide-photo" height="900" loading="lazy" src="images/guides/smart-plug.webp" width="900"/><h3>Smart Plug Buying Guide: Wi-Fi, Matter &amp; Energy Monitoring</h3><p>Know which compatibility details, safety ratings and monitoring features matter before buying.</p><span class="guide-read">Read the guide →</span></a><a class="guide-card" href="guides/small-kitchen-prep-tools/"><img alt="Small-Kitchen Prep Tools: What Earns Its Counter Space?" class="guide-photo" height="900" loading="lazy" src="images/guides/food-prep.webp" width="900"/><h3>Small-Kitchen Prep Tools: What Earns Its Counter Space?</h3><p>Compare compact prep tools by storage, cleanup, capacity and how often you will use them.</p><span class="guide-read">Read the guide →</span></a></div>
-</section>
+</section></div><aside aria-label="Featured product recommendations" class="home-sidebar"><section aria-labelledby="feat-h" class="" id="featured">
+<p class="top-disclosure mb-5"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Our Amazon links are affiliate links, so we may earn a commission at no extra cost to you. <a href="affiliate-disclosure/">Read the full disclosure</a>.</p>
+<div class="flex flex-wrap items-baseline justify-between gap-2">
+<h2 class="text-2xl font-bold" id="feat-h">Featured Picks</h2>
+<a class="text-sm font-semibold text-accent hover:underline" href="compare/">Compare air fryer specs →</a>
+</div>
+<p class="mt-1 text-sm text-stone-600">The Budget-friendly pick from six of our categories. Browse everything below.</p>
+<div class="fp-grid mt-3">
+<div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">Chefman 4-Quart Compact Air Fryer</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A compact way to try air frying.</p><a class="fp-cta" data-asin="B0CNY1F31S" href="https://www.amazon.com/dp/B0CNY1F31S?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Chefman 4-Quart Compact Air Fryer</span></a></div>
+<div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A 10-cup rice cooker with 18 functions.</p><a class="fp-cta" data-asin="B0BD4PRBVZ" href="https://www.amazon.com/dp/B0BD4PRBVZ?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</span></a></div>
+<div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">BLACK+DECKER 1.5-Cup Electric Food Chopper</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A small electric chopper for quick prep.</p><a class="fp-cta" data-asin="B01LYR6VNZ" href="https://www.amazon.com/dp/B01LYR6VNZ?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – BLACK+DECKER 1.5-Cup Electric Food Chopper</span></a></div>
+<div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">See how much power a plugged-in device uses.</p><a class="fp-cta" data-asin="B0H7WJQ8N7" href="https://www.amazon.com/dp/B0H7WJQ8N7?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</span></a></div>
+<div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">BOIFUN Wireless Video Doorbell Camera, 2K HD</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A wireless doorbell camera with 2K video.</p><a class="fp-cta" data-asin="B0CZLFJKYB" href="https://www.amazon.com/dp/B0CZLFJKYB?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – BOIFUN Wireless Video Doorbell Camera, 2K HD</span></a></div>
+<div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">Sensi ST55 Smart Thermostat (Wi-Fi)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A Wi-Fi thermostat from Sensi.</p><a class="fp-cta" data-asin="B01NB1OB0I" href="https://www.amazon.com/dp/B01NB1OB0I?tag=blackfridaycheapdeals-20" rel="sponsored nofollow noopener" target="_blank">Check Price on Amazon<span class="sr"> – Sensi ST55 Smart Thermostat (Wi-Fi)</span></a></div>
+</div>
+</section></aside></div>
+
+
+
+
 <section aria-labelledby="guide-h" class="max-w-3xl mx-auto px-4 py-12" id="guide">
 <h2 class="text-2xl font-bold" id="guide-h">How to Pick a Home Upgrade You’ll Actually Use</h2>
 <h3 class="mt-6 text-lg font-bold">Start with the annoyance, not the gadget</h3>
