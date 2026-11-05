@@ -144,6 +144,12 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
 .pts li{position:relative;padding-left:1.25rem;margin-top:.3rem;line-height:1.35}
 .pts li::before{content:"\2713";position:absolute;left:0;color:#0f766e;font-weight:700}
 .cta{font-size:1rem;padding:.9rem 1rem;box-shadow:0 1px 2px rgba(0,0,0,.15)}
+
+.fp-grid{display:grid;gap:.75rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:1024px){.fp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.fp{display:flex;flex-direction:column;background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:.9rem}
+.fp-cta{display:block;margin-top:.75rem;text-align:center;background:#0f766e;color:#fff;font-weight:600;font-size:.875rem;border-radius:.75rem;padding:.7rem .5rem}
+.fp-cta:hover{background:#115e59}
 </style>
 </head>
 <body class="bg-stone-50 text-ink antialiased">
@@ -197,15 +203,20 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
     </div>
   </section>
 
-<section id="compare-summary" class="max-w-6xl mx-auto px-4 pb-6" aria-labelledby="cmp-h">
+<section id="featured" class="max-w-6xl mx-auto px-4 pb-6" aria-labelledby="feat-h">
+  <p class="top-disclosure mb-5"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Our Amazon links are affiliate links, so we may earn a commission at no extra cost to you. <a href="affiliate-disclosure/">Read the full disclosure</a>.</p>
   <div class="flex flex-wrap items-baseline justify-between gap-2">
-    <h2 id="cmp-h" class="text-2xl font-bold">Air Fryers at a Glance</h2>
-    <a href="compare/" class="text-sm font-semibold text-accent hover:underline">Compare Products &rarr;</a>
+    <h2 id="feat-h" class="text-2xl font-bold">Featured Picks</h2>
+    <a href="compare/" class="text-sm font-semibold text-accent hover:underline">Compare air fryer specs &rarr;</a>
   </div>
-  <div class="cmp-quick mt-3">
-    <div><p class="text-xs font-semibold text-stone-500">Budget-friendly</p><p class="font-bold leading-snug">Chefman 4-Quart</p><p class="text-sm text-stone-600">4 qt basket · small households</p></div>
-    <div><p class="text-xs font-semibold text-stone-500">Mid-range</p><p class="font-bold leading-snug">SPRX 10-Quart</p><p class="text-sm text-stone-600">10 qt toaster oven · larger portions</p></div>
-    <div><p class="text-xs font-semibold text-stone-500">Premium</p><p class="font-bold leading-snug">Ninja FO101</p><p class="text-sm text-stone-600">20.3 qt French-door oven · largest footprint</p></div>
+  <p class="mt-1 text-sm text-stone-600">The Budget-friendly pick from six of our categories. Browse everything below.</p>
+  <div class="fp-grid mt-3">
+    <div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">Chefman 4-Quart Compact Air Fryer</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A compact way to try air frying.</p><a href="https://www.amazon.com/dp/B0CNY1F31S?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0CNY1F31S" class="fp-cta">Check Price on Amazon<span class="sr"> – Chefman 4-Quart Compact Air Fryer</span></a></div>
+    <div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A 10-cup rice cooker with 18 functions.</p><a href="https://www.amazon.com/dp/B0BD4PRBVZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0BD4PRBVZ" class="fp-cta">Check Price on Amazon<span class="sr"> – Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</span></a></div>
+    <div class="fp"><p class="text-xs font-semibold text-stone-500">Kitchen gadgets</p><h3 class="mt-1 font-bold leading-snug">BLACK+DECKER 1.5-Cup Electric Food Chopper</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A small electric chopper for quick prep.</p><a href="https://www.amazon.com/dp/B01LYR6VNZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B01LYR6VNZ" class="fp-cta">Check Price on Amazon<span class="sr"> – BLACK+DECKER 1.5-Cup Electric Food Chopper</span></a></div>
+    <div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">See how much power a plugged-in device uses.</p><a href="https://www.amazon.com/dp/B0H7WJQ8N7?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H7WJQ8N7" class="fp-cta">Check Price on Amazon<span class="sr"> – Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</span></a></div>
+    <div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">BOIFUN Wireless Video Doorbell Camera, 2K HD</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A wireless doorbell camera with 2K video.</p><a href="https://www.amazon.com/dp/B0CZLFJKYB?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0CZLFJKYB" class="fp-cta">Check Price on Amazon<span class="sr"> – BOIFUN Wireless Video Doorbell Camera, 2K HD</span></a></div>
+    <div class="fp"><p class="text-xs font-semibold text-stone-500">Smart home</p><h3 class="mt-1 font-bold leading-snug">Sensi ST55 Smart Thermostat (Wi-Fi)</h3><p class="mt-1 text-sm text-stone-600 leading-snug flex-1">A Wi-Fi thermostat from Sensi.</p><a href="https://www.amazon.com/dp/B01NB1OB0I?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B01NB1OB0I" class="fp-cta">Check Price on Amazon<span class="sr"> – Sensi ST55 Smart Thermostat (Wi-Fi)</span></a></div>
   </div>
 </section>
 
@@ -229,9 +240,7 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
       </div>
     </div>
 
-    <p class="top-disclosure mt-8"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links, so we may earn a commission at no extra cost to you. <a href="affiliate-disclosure/">Read the full disclosure</a>.</p>
-
-    <div id="results" class="mt-6 flex items-baseline justify-between gap-4 scroll-mt">
+    <div id="results" class="mt-8 flex items-baseline justify-between gap-4 scroll-mt">
       <h2 id="count" class="text-sm font-medium text-stone-600" aria-live="polite">Editor’s Picks</h2>
       <button id="reset" type="button" class="text-sm text-accent hover:underline hidden whitespace-nowrap">Clear all</button>
     </div>
@@ -245,6 +254,7 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Chefman 4-Quart Compact Air Fryer</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A compact way to try air frying.</p>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Couples, small families and anyone who mostly reheats leftovers or crisps frozen fries.</p>
   <ul class="pts mt-3 text-sm text-stone-700"><li>Compact 4-quart basket, sized for roughly two to four servings</li><li>Digital touch controls with four one-touch presets</li><li>Nonstick basket described as dishwasher safe</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Plan on cooking in batches if you’re feeding more than four people.</p>
   <details class="more mt-3 flex-1">
@@ -274,7 +284,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">SPRX 10-Quart Air Fryer Toaster Oven</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">An air fryer and toaster oven in one.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>Air fryer and toaster oven in one footprint</li><li>10-quart capacity, bigger than a compact basket model</li><li>Suits households that cook larger portions</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Households that cook larger portions and have the counter space.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Air fryer and toaster oven in one footprint</li><li>10-quart capacity, bigger than a compact basket model</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Needs counter space and clearance.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -292,7 +303,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Ninja FO101 French Door Premier Air Fry Oven (20.3 Qt)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A big countertop oven with French doors.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>French-door countertop air fry oven</li><li>Listed 20.3-quart capacity, the largest of the three air fryers here</li><li>Oven-style cooking on the counter</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Anyone who wants oven-style cooking on the counter and has room to spare.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>French-door countertop air fry oven</li><li>Listed 20.3-quart capacity, the largest of the three air fryers here</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Size is the main trade-off, so check your counter space.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -310,7 +322,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">See how much power a plugged-in device uses.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>Energy monitoring shows how much power a device draws</li><li>Wi-Fi and Bluetooth connectivity listed</li><li>Handy for a lamp, fan or small appliance</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Keeping an eye on a lamp, fan or small appliance.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Energy monitoring shows how much power a device draws</li><li>Wi-Fi and Bluetooth connectivity listed</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> No brand name in the listing title, so check seller and support details.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -328,7 +341,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">LoraTap Remote Control Outlet (No App, No Wi-Fi)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">On and off from across the room, no app needed.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>Switched with a remote</li><li>Listing says it needs no app and no Wi-Fi</li><li>Turns a lamp or small appliance on and off without getting up</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Switching a lamp or small appliance on and off without getting up.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Switched with a remote</li><li>Listing says it needs no app and no Wi-Fi</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Not a Wi-Fi smart plug, so don’t expect phone control.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -364,7 +378,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">BLACK+DECKER 1.5-Cup Electric Food Chopper</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A small electric chopper for quick prep.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>Electric food chopper</li><li>Listed 1.5-cup capacity</li><li>Suits small batches of onion, garlic or herbs</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Small batches of onion, garlic or herbs.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Electric food chopper</li><li>Listed 1.5-cup capacity</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> A chopper, not a mandoline-style slicer, and too small for a big pile of vegetables.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -382,7 +397,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Mueller Vegetable Chopper Mandoline Slicer</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A vegetable chopper and mandoline slicer in one.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>Chopper and mandoline slicer in one</li><li>Meant for both dicing and slicing</li><li>One tool instead of two for frequent salad, stir-fry or side prep</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Anyone who preps salads, stir-fries or sides often and would rather own one tool than two.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Chopper and mandoline slicer in one</li><li>Meant for both dicing and slicing</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Check which blades or inserts are included.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -508,7 +524,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Instant Pot Pro 8-Quart 10-in-1 Electric Pressure Cooker</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">An 8-quart electric pressure cooker with 10 functions.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>8-quart electric pressure cooker</li><li>10-in-1 design</li><li>A bigger multi-cooker for soups, stews or meal-prep batches</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Soups, stews or meal-prep batches for a full table.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>8-quart electric pressure cooker</li><li>10-in-1 design</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> 8 quarts may be more than you need, and it takes counter and cabinet space.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -579,7 +596,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Digital Food Kitchen Scale (3 kg / 0.1 g)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A basic scale for baking and portions.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>3 kg capacity with 0.1 g resolution</li><li>Range covers most home baking and portioning</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Home baking and portioning.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>3 kg capacity with 0.1 g resolution</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> No brand name in the title, and you’ll want to check which units it supports.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
@@ -615,7 +633,8 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Maestri House S2 Nano Espresso Coffee Scale (1 kg / 0.1 g)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A coffee scale built for espresso.</p>
-  <ul class="pts mt-3 text-sm text-stone-700"><li>Espresso coffee scale</li><li>1 kg capacity with 0.1 g resolution</li><li>Aimed at weighing coffee doses and shots</li></ul>
+  <p class="mt-2 text-sm text-stone-700 leading-snug"><strong class="text-ink">Good for:</strong> Weighing coffee doses and shots for home espresso and brewing.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Espresso coffee scale</li><li>1 kg capacity with 0.1 g resolution</li></ul>
   <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Aimed at coffee, not general cooking.</p>
   <details class="more mt-3 flex-1">
     <summary>More buying notes</summary>
