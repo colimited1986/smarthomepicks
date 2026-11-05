@@ -605,30 +605,26 @@ document.querySelectorAll('a[data-asin]').forEach(a => { a.href = 'https://www.a
    - source: short proof, e.g. "Amazon Associates image link, checked ASIN on 2026-11-05" or "Own photo" or "Manufacturer press kit, permission email 2026-11-05".
    - verified: set to true only after you confirmed the image matches this exact ASIN AND you may use it. */
 const PRODUCT_IMAGES = {
-  'B0CNY1F31S': { src: '', alt: '', source: '', verified: false }, // Chefman 4-Quart Compact Air Fryer
-  'B0FT2GNLVM': { src: '', alt: '', source: '', verified: false }, // Air Fryer (Mid-range Option)
-  'B0FM5KF34G': { src: '', alt: '', source: '', verified: false }, // Air Fryer (Premium Option)
-  'B0H7WJQ8N7': { src: '', alt: '', source: '', verified: false }, // Smart Plug (Budget-friendly Option)
-  'B07GNJ36CG': { src: '', alt: '', source: '', verified: false }, // Smart Plug (Mid-range Option)
-  'B0DKG52WQ4': { src: '', alt: '', source: '', verified: false }, // Smart Plug (Premium Option)
-  'B01LYR6VNZ': { src: '', alt: '', source: '', verified: false }, // Compact Vegetable Chopper (Budget-friendly Option)
-  'B0DCKCK326': { src: '', alt: '', source: '', verified: false }, // Compact Vegetable Chopper (Mid-range Option)
-  'B0F4Y5BRSZ': { src: '', alt: '', source: '', verified: false }, // Compact Vegetable Chopper (Premium Option)
-  'B0CZLFJKYB': { src: '', alt: '', source: '', verified: false }, // Video Doorbell (Budget-friendly Option)
-  'B0HB43Y11Z': { src: '', alt: '', source: '', verified: false }, // Video Doorbell (Mid-range Option)
-  'B0HF1V67GN': { src: '', alt: '', source: '', verified: false }, // Video Doorbell (Premium Option)
-  'B0BD4PRBVZ': { src: '', alt: '', source: '', verified: false }, // Multi-Cooker (Budget-friendly Option)
-  'B0B4PPHG8G': { src: '', alt: '', source: '', verified: false }, // Multi-Cooker (Mid-range Option)
-  'B08PPZWNCV': { src: '', alt: '', source: '', verified: false }, // Multi-Cooker (Premium Option)
-  'B01NB1OB0I': { src: '', alt: '', source: '', verified: false }, // Smart Thermostat (Budget-friendly Option)
-  'B0HCV62684': { src: '', alt: '', source: '', verified: false }, // Smart Thermostat (Mid-range Option)
-  'B0GHZTBTHQ': { src: '', alt: '', source: '', verified: false }, // Smart Thermostat (Premium Option)
-  'B0C8NK63NQ': { src: '', alt: '', source: '', verified: false }, // Digital Kitchen Scale (Budget-friendly Option)
-  'B0H35XP4MT': { src: '', alt: '', source: '', verified: false }, // Digital Kitchen Scale (Mid-range Option)
-  'B0HDS9DMG8': { src: '', alt: '', source: '', verified: false }, // Digital Kitchen Scale (Premium Option)
-  'B0H7JS84M5': { src: '', alt: '', source: '', verified: false }, // Robot Vacuum (Budget-friendly Option)
-  'B0G5XVMVJN': { src: '', alt: '', source: '', verified: false }, // Robot Vacuum (Mid-range Option)
-  'B0H4VVFLSX': { src: '', alt: '', source: '', verified: false }, // Robot Vacuum (Premium Option)
+  'B0CNY1F31S': {
+  src: 'images/products/B0CNY1F31S.jpg',
+  alt: 'Chefman 4-Quart Compact Air Fryer',
+  source: 'Own photo',
+  verified: true
+},
+
+'B0FT2GNLVM': {
+  src: 'images/products/B0FT2GNLVM.jpg',
+  alt: 'Air Fryer – Mid-range',
+  source: 'Own photo',
+  verified: true
+},
+
+'B0FM5KF34G': {
+  src: 'images/products/B0FM5KF34G.jpg',
+  alt: 'Air Fryer – Premium',
+  source: 'Own photo',
+  verified: true
+},
 };
 const SAFE_IMG_SRC = /^(https:\/\/\S+|[\w][\w./-]*)$/i;
 document.querySelectorAll('#grid > article').forEach(card => {
