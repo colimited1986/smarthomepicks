@@ -1,0 +1,12 @@
+*{box-sizing:border-box}body{margin:0;background:#faf8f5;color:#1c2b2a;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0f766e}a:hover{color:#115e59}:focus-visible{outline:3px solid #0f766e;outline-offset:2px}
+.skip{position:absolute;left:.5rem;top:-4rem;background:#1c2b2a;color:#fff;padding:.6rem 1rem;border-radius:.5rem;z-index:50}.skip:focus{top:.5rem}
+header{background:#fff;border-bottom:1px solid #e7e5e4}.bar{max-width:72rem;margin:0 auto;padding:.9rem 1rem;display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center}
+.logo{font-weight:700;font-size:1.125rem;letter-spacing:-.01em;text-decoration:none;color:#1c2b2a}.logo span{color:#0f766e}
+nav.top{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.875rem}nav.top a{color:#44403c;text-decoration:none;padding:.3rem 0}nav.top a:hover{color:#0f766e}
+main{max-width:46rem;margin:0 auto;padding:2rem 1rem 3rem}
+h1{font-size:clamp(1.75rem,5vw,2.5rem);line-height:1.15;letter-spacing:-.02em;margin:.5rem 0 .25rem}h2{font-size:1.25rem;margin:2rem 0 .25rem}
+p,li{color:#44403c}ul{padding-left:1.25rem}.meta{font-size:.875rem;color:#57534e}
+.crumbs{font-size:.875rem;color:#57534e}.callout{background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:1rem 1.25rem;margin:1.25rem 0}
+footer{background:#fff;border-top:1px solid #e7e5e4}.foot{max-width:72rem;margin:0 auto;padding:1.5rem 1rem;font-size:.8rem;color:#57534e}
+.foot nav{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;margin-bottom:.9rem;font-size:.875rem}.foot nav a{color:#44403c}

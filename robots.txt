@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smarthomepicks.coll-limited1986.workers.dev/sitemap.xml
+Sitemap: https://colimited1986.github.io/smarthomepicks/sitemap.xml
