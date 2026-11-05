@@ -135,6 +135,15 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
 .more summary{padding:.4rem 0}
 .top-disclosure{background:#fffbeb;border:1px solid #fde68a;border-radius:.75rem;padding:.75rem 1rem;font-size:.875rem;line-height:1.5;color:#44403c}
 .top-disclosure a{text-decoration:underline;color:#115e59}
+
+/* Launch-readiness additions */
+.cmp-quick{display:grid;gap:.75rem}
+@media(min-width:640px){.cmp-quick{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cmp-quick>div{background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:1rem}
+.catgrid>div{padding:1rem!important}
+.pts li{position:relative;padding-left:1.25rem;margin-top:.3rem;line-height:1.35}
+.pts li::before{content:"\2713";position:absolute;left:0;color:#0f766e;font-weight:700}
+.cta{font-size:1rem;padding:.9rem 1rem;box-shadow:0 1px 2px rgba(0,0,0,.15)}
 </style>
 </head>
 <body class="bg-stone-50 text-ink antialiased">
@@ -146,6 +155,7 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
     <nav aria-label="Main" class="hdr-nav">
       <a href="#results" data-setcat="kitchen">Kitchen Gadgets</a>
       <a href="#results" data-setcat="smart">Smart Home</a>
+      <a href="compare/">Compare</a>
       <a href="#gift-guides">Buying Guides</a>
       <a href="about/">About Us</a>
     </nav>
@@ -163,7 +173,6 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Smarter Picks for a Better Everyday Home.</h1>
       <p class="mt-4 text-stone-600 text-base sm:text-lg max-w-xl mx-auto">Discover practical kitchen gadgets and smart home products selected to make everyday living easier.</p>
       <p class="mt-6"><a href="#results" class="btn btn-link">Explore Our Picks</a></p>
-      <p class="mt-4 text-sm text-stone-600 max-w-xl mx-auto">We pick out useful kitchen and smart home products, explain who each one is for, and flag what to double-check on the Amazon listing before you buy.</p>
       <ul class="mt-6 flex flex-wrap gap-2 justify-center text-xs text-stone-600">
         <li class="bg-accent-soft text-accent-dark rounded-full px-2.5 py-1">Straight talk on every pick</li>
         <li class="bg-accent-soft text-accent-dark rounded-full px-2.5 py-1">Check today’s price on Amazon</li>
@@ -188,94 +197,34 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
     </div>
   </section>
 
-<section class="max-w-6xl mx-auto px-4 py-10"
-         aria-labelledby="compare-air-fryer">
-
-  <h2 id="compare-air-fryer"
-      class="text-2xl font-bold mb-3">
-    Compare Our Air Fryer Picks
-  </h2>
-
-  <p class="text-sm text-stone-600 mb-5">
-    Not sure which air fryer fits your kitchen?
-    Compare capacity, design and the type of household
-    each option may suit.
-  </p>
-
-  <div class="overflow-x-auto rounded-xl border border-stone-200" role="region" aria-label="Air fryer comparison table, scrolls sideways on small screens" tabindex="0">
-    <table class="cmp w-full text-sm text-left">
-      <caption class="sr">Air fryer picks compared by capacity, design, best fit and main trade-off</caption>
-      <thead class="bg-stone-100">
-        <tr>
-          <th scope="col" class="p-3">Feature</th>
-          <th scope="col" class="p-3">Budget</th>
-          <th scope="col" class="p-3">Mid-range</th>
-          <th scope="col" class="p-3">Premium</th>
-        </tr>
-      </thead>
-
-      <tbody class="divide-y divide-stone-200">
-        <tr>
-          <th scope="row" class="p-3">Product</th>
-          <td class="p-3">Chefman 4-Quart</td>
-          <td class="p-3">SPRX 10-Quart</td>
-          <td class="p-3">Ninja FO101</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="p-3">Capacity</th>
-          <td class="p-3">4 qt</td>
-          <td class="p-3">10 qt</td>
-          <td class="p-3">20.3 qt</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="p-3">Design</th>
-          <td class="p-3">Basket style</td>
-          <td class="p-3">Air fryer toaster oven</td>
-          <td class="p-3">French-door oven</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="p-3">Best fit</th>
-          <td class="p-3">Small households</td>
-          <td class="p-3">Larger portions</td>
-          <td class="p-3">Larger countertop cooking needs</td>
-        </tr>
-
-        <tr>
-          <th scope="row" class="p-3">Main trade-off</th>
-          <td class="p-3">Smaller capacity</td>
-          <td class="p-3">Needs more counter space</td>
-          <td class="p-3">Largest footprint</td>
-        </tr>
-      </tbody>
-    </table>
+<section id="compare-summary" class="max-w-6xl mx-auto px-4 pb-6" aria-labelledby="cmp-h">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 id="cmp-h" class="text-2xl font-bold">Air Fryers at a Glance</h2>
+    <a href="compare/" class="text-sm font-semibold text-accent hover:underline">Compare Products &rarr;</a>
   </div>
-
-  <p class="mt-3 text-xs text-stone-500">
-    Product details may change. Confirm dimensions,
-    included accessories and current specifications
-    on the Amazon listing before buying.
-  </p>
+  <div class="cmp-quick mt-3">
+    <div><p class="text-xs font-semibold text-stone-500">Budget-friendly</p><p class="font-bold leading-snug">Chefman 4-Quart</p><p class="text-sm text-stone-600">4 qt basket · small households</p></div>
+    <div><p class="text-xs font-semibold text-stone-500">Mid-range</p><p class="font-bold leading-snug">SPRX 10-Quart</p><p class="text-sm text-stone-600">10 qt toaster oven · larger portions</p></div>
+    <div><p class="text-xs font-semibold text-stone-500">Premium</p><p class="font-bold leading-snug">Ninja FO101</p><p class="text-sm text-stone-600">20.3 qt French-door oven · largest footprint</p></div>
+  </div>
 </section>
 
   <section id="browse" class="max-w-6xl mx-auto px-4 pb-12" aria-labelledby="cats-h">
-    <h2 id="cats-h" class="text-2xl font-bold">Featured Categories</h2>
-    <div class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <h2 id="cats-h" class="text-2xl font-bold">Browse by Category</h2>
+    <div class="mt-4 grid gap-3 sm:grid-cols-3 catgrid">
       <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
         <h3 class="font-bold">Kitchen gadgets</h3>
-        <p class="mt-2 text-sm text-stone-600 leading-relaxed">For slow prep, crowded counters and weeknight dinners: air fryers, multi-cookers, rice cookers, choppers and scales.</p>
+        <p class="mt-2 text-sm text-stone-600 leading-relaxed">Air fryers, multi-cookers, rice cookers, choppers and scales.</p>
         <button type="button" class="mt-3 text-sm font-semibold text-accent hover:underline" data-setcat="kitchen">Show kitchen gadgets &rarr;</button>
       </div>
       <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
         <h3 class="font-bold">Smart home appliances</h3>
-        <p class="mt-2 text-sm text-stone-600 leading-relaxed">Convenience upgrades that don’t need a renovation: smart plugs and remote outlets, video doorbells, thermostats and robot vacuums. A few need basic wiring, so check the listing first.</p>
+        <p class="mt-2 text-sm text-stone-600 leading-relaxed">Smart plugs, video doorbells, thermostats and robot vacuums.</p>
         <button type="button" class="mt-3 text-sm font-semibold text-accent hover:underline" data-setcat="smart">Show smart home picks &rarr;</button>
       </div>
       <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
         <h3 class="font-bold">Buying guides</h3>
-        <p class="mt-2 text-sm text-stone-600 leading-relaxed">Gift ideas, small-kitchen picks and smart home basics, with plain notes on what to check before you buy.</p>
+        <p class="mt-2 text-sm text-stone-600 leading-relaxed">Gift ideas, small-kitchen picks and smart home basics.</p>
         <a href="#gift-guides" class="mt-3 inline-block text-sm font-semibold text-accent hover:underline">Browse the guides &rarr;</a>
       </div>
     </div>
@@ -296,9 +245,10 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Chefman 4-Quart Compact Air Fryer</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A compact way to try air frying.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Chefman 4-Quart Compact Air Fryer is a small countertop air fryer for quick weeknight cooking without heating a full-size oven. Its 4-quart basket is sized for roughly two to four servings, which suits couples, small families and anyone who mostly reheats leftovers or crisps frozen fries. If you’re curious about air frying but don’t want to give up much counter space, a compact model like this is a low-commitment place to start.</p>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Compact 4-quart basket, sized for roughly two to four servings</li><li>Digital touch controls with four one-touch presets</li><li>Nonstick basket described as dishwasher safe</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Plan on cooking in batches if you’re feeding more than four people.</p>
   <details class="more mt-3 flex-1">
-    <summary>More buying notes</summary>
+    <summary>More buying notes</summary><p class="mt-2 text-sm text-stone-600 leading-relaxed">The Chefman 4-Quart Compact Air Fryer is a small countertop air fryer for quick weeknight cooking without heating a full-size oven. Its 4-quart basket is sized for roughly two to four servings, which suits couples, small families and anyone who mostly reheats leftovers or crisps frozen fries. If you’re curious about air frying but don’t want to give up much counter space, a compact model like this is a low-commitment place to start.</p>
     <p class="mt-2 text-sm text-stone-600 leading-relaxed">Chefman lists this model with digital touch controls and four one-touch presets, which takes some of the guesswork out of everyday foods. A Hi-Fry mode raises the temperature to 450°F for extra crispness, handy for fries, wings and breaded chicken. The nonstick basket is described as dishwasher safe, which matters if you’d rather not scrub a greasy basket by hand after dinner.</p>
     <p class="mt-2 text-sm text-stone-600 leading-relaxed">In a typical American kitchen, a 4-quart air fryer handles a side of Brussels sprouts, a couple of chicken thighs or an after-school snack. If you’re feeding more than four people, plan on cooking in batches. The compact footprint is the main draw for apartment and small-kitchen cooks, but check the exact dimensions on the listing before you order.</p>
     <h4 class="mt-3 text-sm font-semibold text-ink">Key considerations</h4>
@@ -311,8 +261,9 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
     <h4 class="mt-3 text-sm font-semibold text-ink">Who it’s for</h4>
     <p class="mt-1 text-sm text-stone-600 leading-relaxed">A good fit if you cook for one to four people, have limited counter space, or want to try air frying before paying for a larger model. If you often feed a crowd or want something that also pressure cooks or slow cooks, compare it with a larger air fryer or a multi-cooker.</p>
     <p class="mt-3 text-xs text-stone-500 leading-relaxed">Product details come from manufacturer and retailer information we reviewed. Specs and models change, so confirm everything on the Amazon listing.</p>
+  
   </details>
-  <a href="https://www.amazon.com/dp/B0CNY1F31S?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0CNY1F31S" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See the Chefman air fryer on Amazon<span class="sr"> – Chefman 4-Quart Compact Air Fryer</span></a>
+  <a href="https://www.amazon.com/dp/B0CNY1F31S?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0CNY1F31S" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Chefman 4-Quart Compact Air Fryer</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="air-fryer-oven-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep" data-tier="value" data-type="air-fryer-oven" data-verified="no" data-kw="air fryer toaster oven sprx 10 quart large countertop oven family dinner crispy fries toast value popular">
@@ -323,9 +274,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">SPRX 10-Quart Air Fryer Toaster Oven</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">An air fryer and toaster oven in one.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">SPRX lists this as a 10-quart air fryer toaster oven, a countertop appliance that covers air frying and toaster-oven cooking in one footprint. At 10 quarts it’s bigger than a compact basket model, so it makes the most sense for households that cook larger portions and have the counter space.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Interior size for the pans and dishes you use, which cooking functions the listing includes, counter and clearance space, and how the racks and trays clean up.</p>
-  <a href="https://www.amazon.com/dp/B0FT2GNLVM?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0FT2GNLVM" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See the air fryer on Amazon<span class="sr"> – SPRX 10-Quart Air Fryer Toaster Oven</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Air fryer and toaster oven in one footprint</li><li>10-quart capacity, bigger than a compact basket model</li><li>Suits households that cook larger portions</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Needs counter space and clearance.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">SPRX lists this as a 10-quart air fryer toaster oven, a countertop appliance that covers air frying and toaster-oven cooking in one footprint. At 10 quarts it’s bigger than a compact basket model, so it makes the most sense for households that cook larger portions and have the counter space.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Interior size for the pans and dishes you use, which cooking functions the listing includes, counter and clearance space, and how the racks and trays clean up.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0FT2GNLVM?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0FT2GNLVM" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – SPRX 10-Quart Air Fryer Toaster Oven</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="air-fryer-oven-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep" data-tier="premium" data-type="air-fryer-oven" data-verified="no" data-kw="ninja french frenchdoor premier air fry oven fo101 20 quart large countertop oven toaster oven family dinner crispy premium best">
@@ -336,9 +292,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Ninja FO101 French Door Premier Air Fry Oven (20.3 Qt)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A big countertop oven with French doors.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Ninja FO101 is a French-door countertop air fry oven with a listed 20.3-quart capacity, the largest of the three air fryers here. It fits best if you want oven-style cooking on the counter and have room to spare, since size is the main trade-off.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Exact dimensions and door clearance, rack and pan sizes, which cooking functions it lists, and whether your outlet and counter can handle it.</p>
-  <a href="https://www.amazon.com/dp/B0FM5KF34G?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0FM5KF34G" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See the air fryer on Amazon<span class="sr"> – Ninja FO101 French Door Premier Air Fry Oven (20.3 Qt)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>French-door countertop air fry oven</li><li>Listed 20.3-quart capacity, the largest of the three air fryers here</li><li>Oven-style cooking on the counter</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Size is the main trade-off, so check your counter space.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Ninja FO101 is a French-door countertop air fry oven with a listed 20.3-quart capacity, the largest of the three air fryers here. It fits best if you want oven-style cooking on the counter and have room to spare, since size is the main trade-off.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Exact dimensions and door clearance, rack and pan sizes, which cooking functions it lists, and whether your outlet and counter can handle it.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0FM5KF34G?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0FM5KF34G" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Ninja FO101 French Door Premier Air Fry Oven (20.3 Qt)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-plug-energy-monitor-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="convenience" data-tier="budget" data-type="smart-plug-energy-monitor" data-verified="no" data-kw="smart plug energy monitoring wifi bluetooth smart outlet electricity power usage bill lamp fan appliance schedule automation single 1 pack budget cheap affordable">
@@ -349,9 +310,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">See how much power a plugged-in device uses.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">This single smart plug is listed with energy monitoring plus Wi-Fi and Bluetooth connectivity. Energy monitoring shows how much power a connected device draws, which can be handy for a lamp, fan or small appliance. The listing title doesn’t show a brand name, so look closely at seller and support details.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> The brand and seller, amp and wattage rating, which apps and voice assistants it works with, and whether it blocks the second outlet.</p>
-  <a href="https://www.amazon.com/dp/B0H7WJQ8N7?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H7WJQ8N7" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check plug compatibility<span class="sr"> – Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Energy monitoring shows how much power a device draws</li><li>Wi-Fi and Bluetooth connectivity listed</li><li>Handy for a lamp, fan or small appliance</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> No brand name in the listing title, so check seller and support details.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">This single smart plug is listed with energy monitoring plus Wi-Fi and Bluetooth connectivity. Energy monitoring shows how much power a connected device draws, which can be handy for a lamp, fan or small appliance. The listing title doesn’t show a brand name, so look closely at seller and support details.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> The brand and seller, amp and wattage rating, which apps and voice assistants it works with, and whether it blocks the second outlet.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0H7WJQ8N7?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H7WJQ8N7" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Smart Plug with Energy Monitoring, Wi-Fi and Bluetooth (1-Pack)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-plug-energy-monitor-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="convenience" data-tier="value" data-type="remote-control-outlet" data-verified="no" data-kw="remote control outlet remote outlet wireless loratap no app no wifi lamp fan appliance on off switch simple value popular">
@@ -362,9 +328,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">LoraTap Remote Control Outlet (No App, No Wi-Fi)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">On and off from across the room, no app needed.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">This LoraTap outlet is switched with a remote, and the listing title says it needs no app and no Wi-Fi. That makes it a simple way to turn a lamp or small appliance on and off without getting up. It isn’t a Wi-Fi smart plug, so don’t expect phone control.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> The remote’s listed range, the amp and wattage rating for what you’ll plug in, how many outlets come in the pack, and whether the plug fits your devices.</p>
-  <a href="https://www.amazon.com/dp/B07GNJ36CG?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B07GNJ36CG" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See remote outlet details<span class="sr"> – LoraTap Remote Control Outlet (No App, No Wi-Fi)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Switched with a remote</li><li>Listing says it needs no app and no Wi-Fi</li><li>Turns a lamp or small appliance on and off without getting up</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Not a Wi-Fi smart plug, so don’t expect phone control.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">This LoraTap outlet is switched with a remote, and the listing title says it needs no app and no Wi-Fi. That makes it a simple way to turn a lamp or small appliance on and off without getting up. It isn’t a Wi-Fi smart plug, so don’t expect phone control.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> The remote’s listed range, the amp and wattage rating for what you’ll plug in, how many outlets come in the pack, and whether the plug fits your devices.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B07GNJ36CG?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B07GNJ36CG" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – LoraTap Remote Control Outlet (No App, No Wi-Fi)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-plug-energy-monitor-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="convenience" data-tier="premium" data-type="smart-plug-energy-monitor" data-verified="no" data-kw="tapo p110m smart plug matter compatible energy monitoring 4 pack 15a outlet electricity power usage bill wifi premium best">
@@ -375,9 +346,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Tapo P110M Smart Plug, Matter Compatible, Energy Monitoring (4-Pack, 15A)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A four-pack with Matter and energy monitoring.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Tapo’s P110M comes as a 4-pack of 15A smart plugs, listed as Matter compatible with energy monitoring. Matter is meant to let a device work across more than one smart home platform, but results depend on your setup, so confirm which apps and hubs the listing names.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Which platforms and voice assistants the listing says it supports, whether you need a hub, the 15A and wattage rating, and whether you need all four plugs.</p>
-  <a href="https://www.amazon.com/dp/B0DKG52WQ4?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0DKG52WQ4" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check plug compatibility<span class="sr"> – Tapo P110M Smart Plug, Matter Compatible, Energy Monitoring (4-Pack, 15A)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>4-pack of 15A smart plugs</li><li>Listed as Matter compatible</li><li>Energy monitoring listed</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Matter results depend on your setup, so confirm which apps and hubs the listing names.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Tapo’s P110M comes as a 4-pack of 15A smart plugs, listed as Matter compatible with energy monitoring. Matter is meant to let a device work across more than one smart home platform, but results depend on your setup, so confirm which apps and hubs the listing names.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Which platforms and voice assistants the listing says it supports, whether you need a hub, the 15A and wattage rating, and whether you need all four plugs.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0DKG52WQ4?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0DKG52WQ4" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Tapo P110M Smart Plug, Matter Compatible, Energy Monitoring (4-Pack, 15A)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="vegetable-chopper-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="budget" data-type="electric-food-chopper" data-verified="no" data-kw="black decker electric food chopper mini 1.5 cup small garlic onion herbs chop prep compact budget cheap affordable">
@@ -388,9 +364,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">BLACK+DECKER 1.5-Cup Electric Food Chopper</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A small electric chopper for quick prep.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">This BLACK+DECKER chopper is electric and has a listed 1.5-cup capacity, so it suits small batches of onion, garlic or herbs better than a big pile of vegetables. It’s a food chopper rather than a mandoline-style slicer.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Bowl size compared with how much you usually chop, which parts are dishwasher safe, and cord length and storage space.</p>
-  <a href="https://www.amazon.com/dp/B01LYR6VNZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B01LYR6VNZ" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See chopper details<span class="sr"> – BLACK+DECKER 1.5-Cup Electric Food Chopper</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Electric food chopper</li><li>Listed 1.5-cup capacity</li><li>Suits small batches of onion, garlic or herbs</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> A chopper, not a mandoline-style slicer, and too small for a big pile of vegetables.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">This BLACK+DECKER chopper is electric and has a listed 1.5-cup capacity, so it suits small batches of onion, garlic or herbs better than a big pile of vegetables. It’s a food chopper rather than a mandoline-style slicer.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Bowl size compared with how much you usually chop, which parts are dishwasher safe, and cord length and storage space.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B01LYR6VNZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B01LYR6VNZ" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – BLACK+DECKER 1.5-Cup Electric Food Chopper</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="vegetable-chopper-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="value" data-type="vegetable-chopper" data-verified="no" data-kw="mueller vegetable chopper mandoline slicer dice slice salad meal prep cutting veggie value popular">
@@ -401,9 +382,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Mueller Vegetable Chopper Mandoline Slicer</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A vegetable chopper and mandoline slicer in one.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Mueller lists this as a vegetable chopper and mandoline slicer, so it’s meant for both dicing and slicing. It could suit anyone who preps salads, stir-fries or sides often and would rather own one tool than two.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Which blades or inserts are included, how it cleans up, how the listing describes hand protection, and how much storage space it takes.</p>
-  <a href="https://www.amazon.com/dp/B0DCKCK326?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0DCKCK326" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See chopper details<span class="sr"> – Mueller Vegetable Chopper Mandoline Slicer</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Chopper and mandoline slicer in one</li><li>Meant for both dicing and slicing</li><li>One tool instead of two for frequent salad, stir-fry or side prep</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Check which blades or inserts are included.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Mueller lists this as a vegetable chopper and mandoline slicer, so it’s meant for both dicing and slicing. It could suit anyone who preps salads, stir-fries or sides often and would rather own one tool than two.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Which blades or inserts are included, how it cleans up, how the listing describes hand protection, and how much storage space it takes.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0DCKCK326?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0DCKCK326" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Mueller Vegetable Chopper Mandoline Slicer</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="vegetable-chopper-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="premium" data-type="vegetable-chopper" data-verified="no" data-kw="mueller ultimate 12 blade vegetable chopper dice slice onion salad meal prep cutting veggie premium best">
@@ -414,9 +400,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Mueller Ultimate 12-Blade Vegetable Chopper</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A vegetable chopper listed with 12 blades.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Mueller Ultimate is listed as a 12-blade vegetable chopper. More blades usually means more cut styles, but the listing will show exactly which blades are included and how you store them between uses.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> What the 12 blades actually are, container size, blade storage, and how easy it is to clean.</p>
-  <a href="https://www.amazon.com/dp/B0F4Y5BRSZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0F4Y5BRSZ" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See chopper details<span class="sr"> – Mueller Ultimate 12-Blade Vegetable Chopper</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Listed as a 12-blade vegetable chopper</li><li>More blades usually means more cut styles</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Check which blades are actually included and how you store them.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Mueller Ultimate is listed as a 12-blade vegetable chopper. More blades usually means more cut styles, but the listing will show exactly which blades are included and how you store them between uses.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> What the 12 blades actually are, container size, blade storage, and how easy it is to clean.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0F4Y5BRSZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0F4Y5BRSZ" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Mueller Ultimate 12-Blade Vegetable Chopper</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="video-doorbell-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="security convenience" data-tier="budget" data-type="video-doorbell" data-verified="no" data-kw="boifun wireless video doorbell camera 2k hd package theft porch security front door visitors delivery alerts budget cheap affordable">
@@ -427,9 +418,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">BOIFUN Wireless Video Doorbell Camera, 2K HD</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A wireless doorbell camera with 2K video.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">BOIFUN lists this as a wireless video doorbell camera with 2K HD video. “Wireless” can mean different things on doorbell listings, such as battery power or a wireless connection to your Wi-Fi, so confirm how it’s powered and whether you need a chime or hub.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> How it’s powered, whether saved video needs a subscription or storage card, Wi-Fi requirements, and whether a chime is included.</p>
-  <a href="https://www.amazon.com/dp/B0CZLFJKYB?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0CZLFJKYB" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check doorbell requirements<span class="sr"> – BOIFUN Wireless Video Doorbell Camera, 2K HD</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>2K HD video listed</li><li>Listed as a wireless video doorbell camera</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> “Wireless” can mean different things, so confirm how it’s powered and whether you need a chime or hub.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">BOIFUN lists this as a wireless video doorbell camera with 2K HD video. “Wireless” can mean different things on doorbell listings, such as battery power or a wireless connection to your Wi-Fi, so confirm how it’s powered and whether you need a chime or hub.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> How it’s powered, whether saved video needs a subscription or storage card, Wi-Fi requirements, and whether a chime is included.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0CZLFJKYB?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0CZLFJKYB" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – BOIFUN Wireless Video Doorbell Camera, 2K HD</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="video-doorbell-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="security convenience" data-tier="value" data-type="video-doorbell" data-verified="no" data-kw="switchbot 2k doorbell camera monitor video doorbell package porch security front door visitors delivery smart value popular">
@@ -440,9 +436,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">SwitchBot 2K Doorbell Camera with Monitor</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A 2K doorbell camera that comes with a monitor.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">SwitchBot lists this doorbell as a 2K camera “with Monitor.” The title doesn’t explain what the monitor is, so read the listing details to see whether it’s an indoor display, how it connects and what it adds over using a phone app.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> What “monitor” means in the listing, how it’s powered and installed, whether saved video needs a subscription, and your Wi-Fi setup.</p>
-  <a href="https://www.amazon.com/dp/B0HB43Y11Z?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HB43Y11Z" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check doorbell requirements<span class="sr"> – SwitchBot 2K Doorbell Camera with Monitor</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>2K doorbell camera</li><li>Listed “with Monitor”</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> The title doesn’t explain what the monitor is, so read the listing details.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">SwitchBot lists this doorbell as a 2K camera “with Monitor.” The title doesn’t explain what the monitor is, so read the listing details to see whether it’s an indoor display, how it connects and what it adds over using a phone app.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> What “monitor” means in the listing, how it’s powered and installed, whether saved video needs a subscription, and your Wi-Fi setup.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0HB43Y11Z?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HB43Y11Z" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – SwitchBot 2K Doorbell Camera with Monitor</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="video-doorbell-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="security convenience" data-tier="premium" data-type="video-doorbell" data-verified="no" data-kw="simplisafe 2k wired video doorbell series 2 hardwired package porch security front door visitors delivery premium best">
@@ -453,9 +454,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">SimpliSafe Wired Video Doorbell Series 2 (2K)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A wired 2K video doorbell.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">SimpliSafe’s Series 2 is a wired video doorbell with 2K video. A wired model usually connects to existing doorbell wiring instead of running on a battery, so check that your wiring and transformer match what the listing requires before you order.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Wiring and transformer requirements, whether features or saved video need a paid plan, and whether it works without a SimpliSafe security system.</p>
-  <a href="https://www.amazon.com/dp/B0HF1V67GN?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HF1V67GN" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check doorbell requirements<span class="sr"> – SimpliSafe Wired Video Doorbell Series 2 (2K)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Wired video doorbell</li><li>2K video</li><li>Wired models usually use existing doorbell wiring instead of a battery</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Check that your wiring and transformer match what the listing requires.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">SimpliSafe’s Series 2 is a wired video doorbell with 2K video. A wired model usually connects to existing doorbell wiring instead of running on a battery, so check that your wiring and transformer match what the listing requires before you order.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Wiring and transformer requirements, whether features or saved video need a paid plan, and whether it works without a SimpliSafe security system.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0HF1V67GN?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HF1V67GN" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – SimpliSafe Wired Video Doorbell Series 2 (2K)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="instant-multi-cooker-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="budget" data-type="rice-cooker" data-verified="no" data-kw="cosori 10 cup rice cooker fuzzy logic 18 in 1 rice grains family countertop budget cheap affordable">
@@ -466,9 +472,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A 10-cup rice cooker with 18 functions.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Cosori lists this as a 10-cup rice cooker with fuzzy logic and an 18-in-1 design. It’s a rice cooker first, so check the function list on the listing before you count on pressure cooking or slow cooking.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Whether 10 cups means uncooked or cooked rice, which of the 18 functions you’d actually use, the bowl’s coating and cleaning, and counter space.</p>
-  <a href="https://www.amazon.com/dp/B0BD4PRBVZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0BD4PRBVZ" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See rice cooker details<span class="sr"> – Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>10-cup rice cooker</li><li>Fuzzy logic</li><li>18-in-1 design</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> It’s a rice cooker first, so check the function list before counting on pressure or slow cooking.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Cosori lists this as a 10-cup rice cooker with fuzzy logic and an 18-in-1 design. It’s a rice cooker first, so check the function list on the listing before you count on pressure cooking or slow cooking.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Whether 10 cups means uncooked or cooked rice, which of the 18 functions you’d actually use, the bowl’s coating and cleaning, and counter space.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0BD4PRBVZ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0BD4PRBVZ" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Cosori 10-Cup Rice Cooker with Fuzzy Logic (18-in-1)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="instant-multi-cooker-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="value" data-type="instant-multi-cooker" data-verified="no" data-kw="ninja possiblecooker pro mc1001 8 in 1 8.5 quart multi cooker one pot batch cooking meal prep family value popular">
@@ -479,9 +490,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Ninja MC1001 PossibleCooker PRO 8-in-1 (8.5 Qt)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">An 8.5-quart cooker with eight functions.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Ninja’s MC1001 PossibleCooker PRO is listed as an 8-in-1 cooker with an 8.5-quart capacity. The title doesn’t say whether it pressure cooks, so check the listing’s mode list to see which of the eight functions it covers.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Which eight functions are included, whether it pressure cooks, how big a batch 8.5 quarts really is for your household, and storage space.</p>
-  <a href="https://www.amazon.com/dp/B0B4PPHG8G?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0B4PPHG8G" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See cooker details<span class="sr"> – Ninja MC1001 PossibleCooker PRO 8-in-1 (8.5 Qt)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>8-in-1 cooker</li><li>8.5-quart capacity</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> The title doesn’t say whether it pressure cooks, so check the mode list.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Ninja’s MC1001 PossibleCooker PRO is listed as an 8-in-1 cooker with an 8.5-quart capacity. The title doesn’t say whether it pressure cooks, so check the listing’s mode list to see which of the eight functions it covers.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Which eight functions are included, whether it pressure cooks, how big a batch 8.5 quarts really is for your household, and storage space.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0B4PPHG8G?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0B4PPHG8G" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Ninja MC1001 PossibleCooker PRO 8-in-1 (8.5 Qt)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="instant-multi-cooker-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="premium" data-type="instant-multi-cooker" data-verified="no" data-kw="instant pot pro 8 quart 10 in 1 electric pressure cooker multi cooker batch cooking meal prep soup stew beans family premium best">
@@ -492,9 +508,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Instant Pot Pro 8-Quart 10-in-1 Electric Pressure Cooker</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">An 8-quart electric pressure cooker with 10 functions.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Instant Pot Pro is an 8-quart, 10-in-1 electric pressure cooker. At that size it’s a bigger multi-cooker, the kind people reach for when they’re cooking soups, stews or meal-prep batches for a full table.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Which 10 functions the listing includes, whether 8 quarts is more than you need, lid and venting details, and counter and cabinet space.</p>
-  <a href="https://www.amazon.com/dp/B08PPZWNCV?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B08PPZWNCV" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See cooker details<span class="sr"> – Instant Pot Pro 8-Quart 10-in-1 Electric Pressure Cooker</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>8-quart electric pressure cooker</li><li>10-in-1 design</li><li>A bigger multi-cooker for soups, stews or meal-prep batches</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> 8 quarts may be more than you need, and it takes counter and cabinet space.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Instant Pot Pro is an 8-quart, 10-in-1 electric pressure cooker. At that size it’s a bigger multi-cooker, the kind people reach for when they’re cooking soups, stews or meal-prep batches for a full table.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Which 10 functions the listing includes, whether 8 quarts is more than you need, lid and venting details, and counter and cabinet space.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B08PPZWNCV?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B08PPZWNCV" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Instant Pot Pro 8-Quart 10-in-1 Electric Pressure Cooker</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-learning-thermostat-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="energy convenience" data-tier="budget" data-type="smart-thermostat" data-verified="no" data-kw="sensi st55 smart thermostat wifi heating cooling hvac schedule temperature comfort energy bill compatibility budget cheap affordable">
@@ -505,9 +526,13 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Sensi ST55 Smart Thermostat (Wi-Fi)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A Wi-Fi thermostat from Sensi.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Sensi ST55 is a Wi-Fi smart thermostat. With any thermostat, compatibility with your heating and cooling system and wiring comes first, so confirm that on the listing and with the maker’s compatibility information before you order.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Compatibility with your system type, whether you need a C-wire, which apps and voice assistants it works with, and how scheduling works.</p>
-  <a href="https://www.amazon.com/dp/B01NB1OB0I?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B01NB1OB0I" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check HVAC compatibility<span class="sr"> – Sensi ST55 Smart Thermostat (Wi-Fi)</span></a>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Confirm compatibility with your heating and cooling system and wiring (and whether you need a C-wire) before you order.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Sensi ST55 is a Wi-Fi smart thermostat. With any thermostat, compatibility with your heating and cooling system and wiring comes first, so confirm that on the listing and with the maker’s compatibility information before you order.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Compatibility with your system type, whether you need a C-wire, which apps and voice assistants it works with, and how scheduling works.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B01NB1OB0I?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B01NB1OB0I" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Sensi ST55 Smart Thermostat (Wi-Fi)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-learning-thermostat-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="energy convenience" data-tier="value" data-type="smart-thermostat" data-verified="no" data-kw="siterwell smart thermostat wifi programmable heating cooling hvac schedule temperature comfort energy bill compatibility value popular">
@@ -518,9 +543,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Siterwell Smart Thermostat, Wi-Fi Programmable</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A Wi-Fi programmable thermostat.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Siterwell lists this as a Wi-Fi programmable smart thermostat. Programmable means you can set heating and cooling schedules, but whether it works with your home depends on your system type and wiring, so check that before anything else.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Which system types it supports (central HVAC, heat pump or electric heat), wiring requirements, and app and voice assistant support.</p>
-  <a href="https://www.amazon.com/dp/B0HCV62684?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HCV62684" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check HVAC compatibility<span class="sr"> – Siterwell Smart Thermostat, Wi-Fi Programmable</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Wi-Fi programmable smart thermostat</li><li>Programmable heating and cooling schedules</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Whether it works depends on your system type and wiring.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Siterwell lists this as a Wi-Fi programmable smart thermostat. Programmable means you can set heating and cooling schedules, but whether it works with your home depends on your system type and wiring, so check that before anything else.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Which system types it supports (central HVAC, heat pump or electric heat), wiring requirements, and app and voice assistant support.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0HCV62684?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HCV62684" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Siterwell Smart Thermostat, Wi-Fi Programmable</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-learning-thermostat-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="energy convenience" data-tier="premium" data-type="smart-thermostat" data-verified="no" data-kw="honeywell home elitepro s1200 thx1200w5 smart thermostat heating cooling hvac schedule temperature comfort energy bill compatibility premium best">
@@ -531,9 +561,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Honeywell Home ElitePro S1200 Smart Thermostat (THX1200W5/U)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A smart thermostat with a model number to match.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Honeywell Home ElitePro S1200 is listed as a smart thermostat under model THX1200W5/U. Check that exact model number on the listing, and make sure it matches your system and wiring, before you order.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> The full model number, compatibility with your heating and cooling system, whether a C-wire is required, and installation requirements.</p>
-  <a href="https://www.amazon.com/dp/B0GHZTBTHQ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0GHZTBTHQ" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check HVAC compatibility<span class="sr"> – Honeywell Home ElitePro S1200 Smart Thermostat (THX1200W5/U)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Listed as a smart thermostat, model THX1200W5/U</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Check that the exact model number matches your system and wiring.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">The Honeywell Home ElitePro S1200 is listed as a smart thermostat under model THX1200W5/U. Check that exact model number on the listing, and make sure it matches your system and wiring, before you order.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> The full model number, compatibility with your heating and cooling system, whether a C-wire is required, and installation requirements.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0GHZTBTHQ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0GHZTBTHQ" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Honeywell Home ElitePro S1200 Smart Thermostat (THX1200W5/U)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-kitchen-scale-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="budget" data-type="smart-kitchen-scale" data-verified="no" data-kw="digital food kitchen scale 3 kg 0.1 g grams baking portion counter small compact measure flour budget cheap affordable">
@@ -544,9 +579,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Digital Food Kitchen Scale (3 kg / 0.1 g)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A basic scale for baking and portions.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">This digital food scale is listed with a 3 kg capacity and 0.1 g resolution, and its title shows no brand name. That range covers most home baking and portioning. Because you’ll likely weigh in ounces at times, check which units it supports.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Which units it switches between, how the listing describes accuracy (resolution isn’t the same thing), what powers it, and the brand and seller.</p>
-  <a href="https://www.amazon.com/dp/B0C8NK63NQ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0C8NK63NQ" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">View scale details<span class="sr"> – Digital Food Kitchen Scale (3 kg / 0.1 g)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>3 kg capacity with 0.1 g resolution</li><li>Range covers most home baking and portioning</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> No brand name in the title, and you’ll want to check which units it supports.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">This digital food scale is listed with a 3 kg capacity and 0.1 g resolution, and its title shows no brand name. That range covers most home baking and portioning. Because you’ll likely weigh in ounces at times, check which units it supports.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Which units it switches between, how the listing describes accuracy (resolution isn’t the same thing), what powers it, and the brand and seller.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0C8NK63NQ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0C8NK63NQ" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Digital Food Kitchen Scale (3 kg / 0.1 g)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-kitchen-scale-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="value" data-type="smart-kitchen-scale" data-verified="no" data-kw="smart nutrition food scale bluetooth calorie macro tracker app diet portion meal prep counting value popular">
@@ -557,9 +597,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Smart Nutrition Food Scale with Bluetooth Calorie and Macro Tracking</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A food scale that tracks calories and macros.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Listed as a Bluetooth smart nutrition scale with calorie and macro tracking, and its title shows no brand name. Bluetooth scales like this usually pair with an app, so check which app it uses, whether it’s free and which phones it supports.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> The app and its phone compatibility, where the nutrition data comes from, whether the scale works without the app, and the brand and seller.</p>
-  <a href="https://www.amazon.com/dp/B0H35XP4MT?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H35XP4MT" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">View scale details<span class="sr"> – Smart Nutrition Food Scale with Bluetooth Calorie and Macro Tracking</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Bluetooth smart nutrition scale</li><li>Calorie and macro tracking</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Usually pairs with an app, so check which app, whether it’s free and which phones it supports.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Listed as a Bluetooth smart nutrition scale with calorie and macro tracking, and its title shows no brand name. Bluetooth scales like this usually pair with an app, so check which app it uses, whether it’s free and which phones it supports.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> The app and its phone compatibility, where the nutrition data comes from, whether the scale works without the app, and the brand and seller.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0H35XP4MT?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H35XP4MT" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Smart Nutrition Food Scale with Bluetooth Calorie and Macro Tracking</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="smart-kitchen-scale-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="kitchen" data-goals="prep small" data-tier="premium" data-type="coffee-scale" data-verified="no" data-kw="maestri house s2 nano espresso coffee scale 1 kg 0.1 g barista brew shot dose grams home espresso premium best">
@@ -570,9 +615,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Maestri House S2 Nano Espresso Coffee Scale (1 kg / 0.1 g)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A coffee scale built for espresso.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Maestri House lists the S2 Nano as an espresso coffee scale with a 1 kg capacity and 0.1 g resolution. It’s aimed at weighing coffee doses and shots for home espresso and brewing, not at general cooking.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> Whether it fits on your drip tray or under your portafilter, what the listing says about a timer, how it’s powered, and water resistance.</p>
-  <a href="https://www.amazon.com/dp/B0HDS9DMG8?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HDS9DMG8" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">See coffee scale details<span class="sr"> – Maestri House S2 Nano Espresso Coffee Scale (1 kg / 0.1 g)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Espresso coffee scale</li><li>1 kg capacity with 0.1 g resolution</li><li>Aimed at weighing coffee doses and shots</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Aimed at coffee, not general cooking.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Maestri House lists the S2 Nano as an espresso coffee scale with a 1 kg capacity and 0.1 g resolution. It’s aimed at weighing coffee doses and shots for home espresso and brewing, not at general cooking.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> Whether it fits on your drip tray or under your portafilter, what the listing says about a timer, how it’s powered, and water resistance.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0HDS9DMG8?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0HDS9DMG8" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Maestri House S2 Nano Espresso Coffee Scale (1 kg / 0.1 g)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="robot-vacuum-budget" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="clean convenience" data-tier="budget" data-type="robot-vacuum" data-verified="no" data-kw="robot vacuum mop combo 8000pa self emptying hands free floors cleaning dust crumbs pet hair budget cheap affordable">
@@ -583,9 +633,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Robot Vacuum and Mop Combo, 8000Pa, Self-Emptying</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A robot vacuum and mop that empties itself.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Listed as a robot vacuum and mop combo with 8000Pa suction and a self-emptying base. The title shows no brand name. Pa figures are manufacturer claims that are hard to compare across brands, so look at floor types, mapping and support too.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> The brand, seller and support, floor and rug suitability, how the self-emptying base works and what it costs to maintain.</p>
-  <a href="https://www.amazon.com/dp/B0H7JS84M5?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H7JS84M5" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check floor and rug compatibility<span class="sr"> – Robot Vacuum and Mop Combo, 8000Pa, Self-Emptying</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Robot vacuum and mop combo</li><li>8000Pa suction (a manufacturer claim)</li><li>Self-emptying base</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> No brand name in the title, and Pa figures are hard to compare across brands.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Listed as a robot vacuum and mop combo with 8000Pa suction and a self-emptying base. The title shows no brand name. Pa figures are manufacturer claims that are hard to compare across brands, so look at floor types, mapping and support too.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> The brand, seller and support, floor and rug suitability, how the self-emptying base works and what it costs to maintain.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0H7JS84M5?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H7JS84M5" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Robot Vacuum and Mop Combo, 8000Pa, Self-Emptying</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="robot-vacuum-value" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="clean convenience" data-tier="value" data-type="robot-vacuum" data-verified="no" data-kw="dreame d20 airplus robot vacuum mop 20000pa floors cleaning dust crumbs pet hair value popular">
@@ -596,9 +651,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Dreame D20 Air Plus Robot Vacuum and Mop (20,000Pa)</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A robot vacuum and mop with 20,000Pa suction.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Dreame lists the D20 Air Plus as a robot vacuum and mop with 20,000Pa suction. A big suction number alone doesn’t tell you how well it cleans, so read what the listing says about mopping, obstacle handling, the base station and app features.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> How mopping works, whether the listing mentions a base station, floor and rug suitability, app features, and parts and support.</p>
-  <a href="https://www.amazon.com/dp/B0G5XVMVJN?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0G5XVMVJN" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check floor and rug compatibility<span class="sr"> – Dreame D20 Air Plus Robot Vacuum and Mop (20,000Pa)</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Robot vacuum and mop</li><li>20,000Pa suction listed</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> A big suction number alone doesn’t show how well it cleans, so read the mopping details.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Dreame lists the D20 Air Plus as a robot vacuum and mop with 20,000Pa suction. A big suction number alone doesn’t tell you how well it cleans, so read what the listing says about mopping, obstacle handling, the base station and app features.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> How mopping works, whether the listing mentions a base station, floor and rug suitability, app features, and parts and support.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0G5XVMVJN?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0G5XVMVJN" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Dreame D20 Air Plus Robot Vacuum and Mop (20,000Pa)</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
 <article id="robot-vacuum-premium" class="card scroll-mt bg-white border border-stone-200 rounded-2xl p-5 shadow-sm flex flex-col" data-cat="smart" data-goals="clean convenience" data-tier="premium" data-type="robot-vacuum" data-verified="no" data-kw="uninell zenith10 robot vacuum mop auto wash dock floors cleaning mopping hands free premium best">
@@ -609,9 +669,14 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
   </div>
   <h3 class="mt-3 text-lg font-bold leading-snug">Uninell Zenith10 Robot Vacuum and Mop with Auto Wash Dock</h3>
   <p class="mt-1 text-sm font-semibold text-accent-dark">A robot vacuum and mop with an auto wash dock.</p>
-  <p class="mt-2 text-sm text-stone-600 leading-relaxed">Uninell’s Zenith10 is listed as a robot vacuum and mop with an auto wash dock, a dock meant to wash the mop for you. Check what the dock actually does (washing, drying, emptying), how much space it needs and what upkeep it asks for.</p>
-  <p class="mt-3 text-sm text-stone-600 leading-relaxed flex-1"><strong class="text-ink">Check before you buy:</strong> What the dock handles, its footprint, water tank and upkeep, floor and rug suitability, and support from the seller.</p>
-  <a href="https://www.amazon.com/dp/B0H4VVFLSX?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H4VVFLSX" class="mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check floor and rug compatibility<span class="sr"> – Uninell Zenith10 Robot Vacuum and Mop with Auto Wash Dock</span></a>
+  <ul class="pts mt-3 text-sm text-stone-700"><li>Robot vacuum and mop</li><li>Auto wash dock meant to wash the mop for you</li></ul>
+  <p class="lim mt-3 text-sm text-stone-600 leading-snug"><strong class="text-ink">Keep in mind:</strong> Check what the dock actually does, how much space it needs and what upkeep it asks for.</p>
+  <details class="more mt-3 flex-1">
+    <summary>More buying notes</summary>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed">Uninell’s Zenith10 is listed as a robot vacuum and mop with an auto wash dock, a dock meant to wash the mop for you. Check what the dock actually does (washing, drying, emptying), how much space it needs and what upkeep it asks for.</p>
+    <p class="mt-2 text-sm text-stone-600 leading-relaxed"><strong class="text-ink">Check before you buy:</strong> What the dock handles, its footprint, water tank and upkeep, floor and rug suitability, and support from the seller.</p>
+  </details>
+  <a href="https://www.amazon.com/dp/B0H4VVFLSX?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" data-asin="B0H4VVFLSX" class="cta mt-3 block text-center bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl px-4 py-3 transition-colors">Check Price on Amazon<span class="sr"> – Uninell Zenith10 Robot Vacuum and Mop with Auto Wash Dock</span></a>
   <p class="mt-2 text-xs text-stone-500 text-center">Amazon affiliate link. We may earn a commission at no extra cost to you.</p>
 </article>
     </div>
