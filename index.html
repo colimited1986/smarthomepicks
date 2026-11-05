@@ -54,7 +54,6 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 .transition-colors{transition:color .15s,background-color .15s,border-color .15s}
 @media(min-width:640px){.sm\:p-7{padding:1.75rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.leading-tight{line-height:1.1}}
 @media(min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.hidden{display:none}
 /* page-specific */
   html { scroll-behavior: smooth; }
   body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
@@ -64,13 +63,6 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
   @media (prefers-reduced-motion: reduce) { .card { animation: none; } html { scroll-behavior: auto; } }
   :focus-visible { outline: 3px solid #0f766e; outline-offset: 2px; }
 
-.justify-center{justify-content:center}.underline{text-decoration:underline}.scroll-mt{scroll-margin-top:1rem}
-.faq details{border-top:1px solid #e7e5e4;padding:1rem 0}.faq details:last-child{border-bottom:1px solid #e7e5e4}
-.faq summary{cursor:pointer;font-weight:600;list-style:none}.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";float:right;color:#0f766e;font-weight:700}.faq details[open] summary::after{content:"\2212"}
-.faq p{margin-top:.5rem;color:#57534e;line-height:1.625;font-size:.875rem}
-.hidden{display:none}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 .justify-center{justify-content:center}.underline{text-decoration:underline}.scroll-mt{scroll-margin-top:1rem}
 .faq details{border-top:1px solid #e7e5e4;padding:1rem 0}.faq details:last-child{border-bottom:1px solid #e7e5e4}
@@ -78,7 +70,6 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 .faq summary::after{content:"+";float:right;color:#0f766e;font-weight:700}.faq details[open] summary::after{content:"\2212"}
 .faq p{margin-top:.5rem;color:#57534e;line-height:1.625;font-size:.875rem}
 .whitespace-nowrap{white-space:nowrap}.gap-4{gap:1rem}
-.hidden{display:none}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 .mt-1{margin-top:.25rem}.mb-4{margin-bottom:1rem}.mt-5{margin-top:1.25rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}
@@ -126,6 +117,24 @@ body{background:#faf8f5}
 .trust-grid>div{background:#fff;border:1px solid #e7e5e4;border-radius:1rem;padding:1.25rem}
 .flinks{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;font-size:.875rem;margin-bottom:1rem}
 .flinks a{color:#44403c;text-decoration:underline}.flinks a:hover{color:#0f766e}
+
+/* Utilities that were used in the HTML but had no rule */
+table{border-collapse:collapse}
+.w-full{width:100%}.p-3{padding:.75rem}.px-3{padding-left:.75rem;padding-right:.75rem}.text-left{text-align:left}
+.overflow-x-auto{overflow-x:auto;-webkit-overflow-scrolling:touch}.bg-stone-100{background:#f5f5f4}.inline-block{display:inline-block}
+.mb-3{margin-bottom:.75rem}.mb-5{margin-bottom:1.25rem}.pb-4{padding-bottom:1rem}.pb-12{padding-bottom:3rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}
+.divide-y>*+*{border-top:1px solid #e7e5e4}.divide-stone-200>*+*{border-color:#e7e5e4}
+button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
+.cmp th,.cmp td{vertical-align:top}.cmp tbody th{font-weight:600}
+@media (max-width:639px){.cmp th,.cmp td{padding:.6rem .45rem;font-size:.8125rem;line-height:1.3}}
+/* Comfortable tap targets, no layout change */
+.hdr-nav a{padding:.6rem 0}
+.ex,.chip{min-height:2.25rem}
+.flinks a{display:inline-block;padding:.4rem 0}
+#reset,#emptyReset{padding:.4rem 0}
+.more summary{padding:.4rem 0}
+.top-disclosure{background:#fffbeb;border:1px solid #fde68a;border-radius:.75rem;padding:.75rem 1rem;font-size:.875rem;line-height:1.5;color:#44403c}
+.top-disclosure a{text-decoration:underline;color:#115e59}
 </style>
 </head>
 <body class="bg-stone-50 text-ink antialiased">
@@ -153,7 +162,7 @@ body{background:#faf8f5}
     <div class="max-w-3xl mx-auto px-4 pt-12 pb-10 text-center">
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Smarter Picks for a Better Everyday Home.</h1>
       <p class="mt-4 text-stone-600 text-base sm:text-lg max-w-xl mx-auto">Discover practical kitchen gadgets and smart home products selected to make everyday living easier.</p>
-      <p class="mt-6"><a href="#results" class="btn btn-link">Explore Our Top Picks</a></p>
+      <p class="mt-6"><a href="#results" class="btn btn-link">Explore Our Picks</a></p>
       <p class="mt-4 text-sm text-stone-600 max-w-xl mx-auto">We pick out useful kitchen and smart home products, explain who each one is for, and flag what to double-check on the Amazon listing before you buy.</p>
       <ul class="mt-6 flex flex-wrap gap-2 justify-center text-xs text-stone-600">
         <li class="bg-accent-soft text-accent-dark rounded-full px-2.5 py-1">Straight talk on every pick</li>
@@ -177,9 +186,8 @@ body{background:#faf8f5}
       <h3 class="mt-5 font-semibold text-sm text-stone-600">Category and price level</h3>
       <div class="mt-2 flex flex-wrap gap-2" role="group" aria-label="Choose a category or price level"><button type="button" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" aria-pressed="false" data-key="cat" data-id="kitchen">Kitchen gadgets</button><button type="button" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" aria-pressed="false" data-key="cat" data-id="smart">Smart home appliances</button><button type="button" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" aria-pressed="false" data-key="tier" data-id="budget">Budget-friendly</button><button type="button" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" aria-pressed="false" data-key="tier" data-id="value">Mid-range</button><button type="button" class="chip border border-stone-300 bg-white rounded-full px-4 py-2 text-sm font-medium hover:border-accent transition-colors" aria-pressed="false" data-key="tier" data-id="premium">Premium</button></div>
     </div>
+  </section>
 
-    <h2 id="cats-h" class="mt-8 text-2xl font-bold">Featured Categories</h2>
-    
 <section class="max-w-6xl mx-auto px-4 py-10"
          aria-labelledby="compare-air-fryer">
 
@@ -194,48 +202,49 @@ body{background:#faf8f5}
     each option may suit.
   </p>
 
-  <div class="overflow-x-auto rounded-xl border border-stone-200">
-    <table class="w-full text-sm text-left">
+  <div class="overflow-x-auto rounded-xl border border-stone-200" role="region" aria-label="Air fryer comparison table, scrolls sideways on small screens" tabindex="0">
+    <table class="cmp w-full text-sm text-left">
+      <caption class="sr">Air fryer picks compared by capacity, design, best fit and main trade-off</caption>
       <thead class="bg-stone-100">
         <tr>
-          <th class="p-3">Feature</th>
-          <th class="p-3">Budget</th>
-          <th class="p-3">Mid-range</th>
-          <th class="p-3">Premium</th>
+          <th scope="col" class="p-3">Feature</th>
+          <th scope="col" class="p-3">Budget</th>
+          <th scope="col" class="p-3">Mid-range</th>
+          <th scope="col" class="p-3">Premium</th>
         </tr>
       </thead>
 
       <tbody class="divide-y divide-stone-200">
         <tr>
-          <th class="p-3">Product</th>
+          <th scope="row" class="p-3">Product</th>
           <td class="p-3">Chefman 4-Quart</td>
           <td class="p-3">SPRX 10-Quart</td>
           <td class="p-3">Ninja FO101</td>
         </tr>
 
         <tr>
-          <th class="p-3">Capacity</th>
+          <th scope="row" class="p-3">Capacity</th>
           <td class="p-3">4 qt</td>
           <td class="p-3">10 qt</td>
           <td class="p-3">20.3 qt</td>
         </tr>
 
         <tr>
-          <th class="p-3">Design</th>
+          <th scope="row" class="p-3">Design</th>
           <td class="p-3">Basket style</td>
           <td class="p-3">Air fryer toaster oven</td>
           <td class="p-3">French-door oven</td>
         </tr>
 
         <tr>
-          <th class="p-3">Best fit</th>
+          <th scope="row" class="p-3">Best fit</th>
           <td class="p-3">Small households</td>
           <td class="p-3">Larger portions</td>
           <td class="p-3">Larger countertop cooking needs</td>
         </tr>
 
         <tr>
-          <th class="p-3">Main trade-off</th>
+          <th scope="row" class="p-3">Main trade-off</th>
           <td class="p-3">Smaller capacity</td>
           <td class="p-3">Needs more counter space</td>
           <td class="p-3">Largest footprint</td>
@@ -251,6 +260,8 @@ body{background:#faf8f5}
   </p>
 </section>
 
+  <section id="browse" class="max-w-6xl mx-auto px-4 pb-12" aria-labelledby="cats-h">
+    <h2 id="cats-h" class="text-2xl font-bold">Featured Categories</h2>
     <div class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       <div class="bg-white border border-stone-200 rounded-2xl p-5 shadow-sm">
         <h3 class="font-bold">Kitchen gadgets</h3>
@@ -269,7 +280,9 @@ body{background:#faf8f5}
       </div>
     </div>
 
-    <div id="results" class="mt-8 flex items-baseline justify-between gap-4 scroll-mt">
+    <p class="top-disclosure mt-8"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links, so we may earn a commission at no extra cost to you. <a href="affiliate-disclosure/">Read the full disclosure</a>.</p>
+
+    <div id="results" class="mt-6 flex items-baseline justify-between gap-4 scroll-mt">
       <h2 id="count" class="text-sm font-medium text-stone-600" aria-live="polite">Editor’s Picks</h2>
       <button id="reset" type="button" class="text-sm text-accent hover:underline hidden whitespace-nowrap">Clear all</button>
     </div>
@@ -669,7 +682,7 @@ body{background:#faf8f5}
 const TAG = 'blackfridaycheapdeals-20';
 document.querySelectorAll('a[data-asin]').forEach(a => { a.href = 'https://www.amazon.com/dp/' + a.dataset.asin + '?tag=' + TAG; });
 
-/* PRODUCT IMAGES – fill in per ASIN. An image is shown ONLY when ALL of these are true:
+/* PRODUCT IMAGES – fill in per ASIN. (alt defaults to the product name shown on the card.) An image is shown ONLY when ALL of these are true:
      verified === true, src is filled in, and source says where the image came from / the permission you have.
    Otherwise the card keeps the "Product image coming soon" placeholder.
    - src:    https:// URL or a path to a file you host yourself (e.g. images/B0CNY1F31S.jpg). Use only images you are allowed to use.
@@ -686,161 +699,161 @@ const PRODUCT_IMAGES = {
 
 'B0FT2GNLVM': {
   src: 'images/products/B0FT2GNLVM.jpg',
-  alt: 'Air Fryer – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0FM5KF34G': {
   src: 'images/products/B0FM5KF34G.jpg',
-  alt: 'Air Fryer – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
   'B01LYR6VNZ': {
   src: 'images/products/B01LYR6VNZ.jpg',
-  alt: 'Compact Vegetable Chopper – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0DCKCK326': {
   src: 'images/products/B0DCKCK326.jpg',
-  alt: 'Compact Vegetable Chopper – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0F4Y5BRSZ': {
   src: 'images/products/B0F4Y5BRSZ.jpg',
-  alt: 'Compact Vegetable Chopper – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0BD4PRBVZ': {
   src: 'images/products/B0BD4PRBVZ.jpg',
-  alt: 'Multi-Cooker – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0B4PPHG8G': {
   src: 'images/products/B0B4PPHG8G.jpg',
-  alt: 'Multi-Cooker – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B08PPZWNCV': {
   src: 'images/products/B08PPZWNCV.jpg',
-  alt: 'Multi-Cooker – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0C8NK63NQ': {
   src: 'images/products/B0C8NK63NQ.jpg',
-  alt: 'Digital Kitchen Scale – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0H35XP4MT': {
   src: 'images/products/B0H35XP4MT.jpg',
-  alt: 'Digital Kitchen Scale – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0HDS9DMG8': {
   src: 'images/products/B0HDS9DMG8.jpg',
-  alt: 'Digital Kitchen Scale – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0H7WJQ8N7': {
   src: 'images/products/B0H7WJQ8N7.jpg',
-  alt: 'Smart Plug – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B07GNJ36CG': {
   src: 'images/products/B07GNJ36CG.jpg',
-  alt: 'Smart Plug – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0DKG52WQ4': {
   src: 'images/products/B0DKG52WQ4.jpg',
-  alt: 'Smart Plug – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0CZLFJKYB': {
   src: 'images/products/B0CZLFJKYB.jpg',
-  alt: 'Video Doorbell – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0HB43Y11Z': {
   src: 'images/products/B0HB43Y11Z.jpg',
-  alt: 'Video Doorbell – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0HF1V67GN': {
   src: 'images/products/B0HF1V67GN.jpg',
-  alt: 'Video Doorbell – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B01NB1OB0I': {
   src: 'images/products/B01NB1OB0I.jpg',
-  alt: 'Smart Thermostat – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0HCV62684': {
   src: 'images/products/B0HCV62684.jpg',
-  alt: 'Smart Thermostat – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0GHZTBTHQ': {
   src: 'images/products/B0GHZTBTHQ.jpg',
-  alt: 'Smart Thermostat – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0H7JS84M5': {
   src: 'images/products/B0H7JS84M5.jpg',
-  alt: 'Robot Vacuum – Budget',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0G5XVMVJN': {
   src: 'images/products/B0G5XVMVJN.jpg',
-  alt: 'Robot Vacuum – Mid-range',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
 
 'B0H4VVFLSX': {
   src: 'images/products/B0H4VVFLSX.jpg',
-  alt: 'Robot Vacuum – Premium',
+  alt: '',
   source: 'Own photo',
   verified: true
 },
@@ -853,7 +866,7 @@ document.querySelectorAll('#grid > article').forEach(card => {
   const cfg = PRODUCT_IMAGES[link.dataset.asin];
   if (!cfg || cfg.verified !== true || !cfg.src || !cfg.source || !SAFE_IMG_SRC.test(cfg.src)) return;
   const img = new Image();
-  img.alt = cfg.alt || 'Product photo for this pick';
+  const nm = card.querySelector('h3'); img.alt = cfg.alt || (nm ? nm.textContent.trim() : 'Product photo for this pick');
   img.width = 600;
   img.height = 600;
   img.loading = 'lazy';
