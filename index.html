@@ -321,6 +321,53 @@ footer{margin-top:1.25rem;background:#006b68!important;color:#fff!important;bord
 }
 </style>
 
+
+<style id="shp-responsive-audit-v2">
+/* Shared responsive finishing: navigation, reading width, touch targets and overflow. */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 1rem; }
+  body { overflow-x: clip; }
+  .hdr-nav, .nav {
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    max-width:100% !important;
+    white-space:nowrap !important;
+    gap:1.1rem !important;
+    padding:.25rem .1rem .55rem !important;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+  }
+  .hdr-nav::-webkit-scrollbar, .nav::-webkit-scrollbar { display:none; }
+  .hdr-nav a, .nav a { flex:0 0 auto; min-height:2.5rem; display:inline-flex; align-items:center; }
+  main, .wrap { min-width:0; max-width:100%; }
+  h1, h2, h3, p, li { overflow-wrap:anywhere; }
+  img, video, iframe { max-width:100%; }
+  button, a { -webkit-tap-highlight-color:transparent; }
+  a, button, summary { touch-action:manipulation; }
+  .hero-img { height:auto !important; max-height: min(68vw, 340px); aspect-ratio: 16 / 9; object-fit:cover; }
+  .footer, footer { padding-left:1rem; padding-right:1rem; }
+}
+@media (max-width: 420px) {
+  .wrap { padding-left:1rem !important; padding-right:1rem !important; }
+  h1 { font-size:clamp(1.85rem,8vw,2.35rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+</style>
+
+<style id="shp-home-mobile-finishing">
+@media(max-width:760px){
+  .hdr-nav { padding-right:1rem !important; scroll-padding-inline:1rem; }
+  .hero-inner h1,.hero-inner>p { text-shadow:0 1px 0 rgba(255,255,255,.28); }
+  .category-strip { row-gap:.65rem !important; }
+  .category-tile { min-width:0 !important; }
+}
+</style>
+
 </head>
 <body class="bg-stone-50 text-ink antialiased">
 <a class="skip" href="#main">Skip to content</a>
