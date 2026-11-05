@@ -1,14 +1,41 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://colimited1986.github.io/smarthomepicks/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/about/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/contact/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/privacy-policy/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/terms-of-use/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/editorial-policy/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/how-we-choose-products/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/affiliate-disclosure/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/gifts-under-50/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/smart-home-gifts/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://colimited1986.github.io/smarthomepicks/small-kitchen-gadgets/</loc><lastmod>2026-11-05</lastmod></url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/about/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/contact/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/privacy-policy/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/terms-of-use/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/affiliate-disclosure/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/editorial-policy/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/how-we-choose-products/</loc>
+  </url>
+
+  <url>
+    <loc>https://colimited1986.github.io/smarthomepicks/small-kitchen-gadgets/</loc>
+  </url>
+
 </urlset>
