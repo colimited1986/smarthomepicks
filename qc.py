@@ -68,8 +68,10 @@ for i, sc in enumerate(soup.find_all('script', type='application/ld+json')):
 
 # ---------- affiliate ----------
 tag_match = re.search(r"const TAG = '([^']+)'", src)
-TAG = tag_match.group(1) if tag_match else ''
 alinks = soup.select('a[href*="amazon."]')
+# Pages without the homepage's JS affiliate-tag constant still carry the tag
+# directly in their Amazon URLs; infer the expected tag from the first link.
+TAG = tag_match.group(1) if tag_match else (re.search(r'[?&]tag=([^&]+)', alinks[0]['href']).group(1) if alinks and re.search(r'[?&]tag=([^&]+)', alinks[0]['href']) else '')
 bad_tag = [a['href'] for a in alinks if not TAG or f'tag={TAG}' not in a['href']]
 add('PASS' if alinks and not bad_tag else 'FAIL', f'all {len(alinks)} Amazon links carry tag={TAG}', str(bad_tag[:3]))
 bad_rel = [a['href'] for a in alinks if not {'sponsored', 'nofollow'} <= set(a.get('rel', []))]
@@ -105,10 +107,17 @@ for img in soup.find_all('img'):
 # ---------- internal links ----------
 rel = sorted({a['href'] for a in soup.find_all('a', href=True)
               if not a['href'].startswith(('#', 'http', 'mailto', 'data:', 'javascript'))})
+page_dir = os.path.dirname(os.path.abspath(path))
 for h in rel:
     clean_h = h.split('#', 1)[0]
-    p = os.path.join(root, clean_h.rstrip('/'), 'index.html') if clean_h.endswith('/') else os.path.join(root, clean_h)
-    if h == './' or clean_h == '': continue
+    if h == './' or clean_h in ('', '.', '..'): continue
+    if clean_h.startswith('/'):
+        target = os.path.join(root, clean_h.lstrip('/'))
+    else:
+        target = os.path.normpath(os.path.join(page_dir, clean_h))
+    p = os.path.join(target, 'index.html') if h.endswith('/') or os.path.isdir(target) else target
+    if h.endswith('/') and not os.path.isdir(target):
+        p = os.path.join(target, 'index.html')
     add('PASS' if os.path.exists(p) else 'NEEDS VERIFICATION', f'internal link {h}', 'file found' if os.path.exists(p) else 'target not in provided files; verify in repo/live site')
 for a in soup.find_all('a', href=True):
     if a['href'].startswith('#') and len(a['href']) > 1 and a['href'][1:] not in ids:
@@ -116,6 +125,18 @@ for a in soup.find_all('a', href=True):
 
 # ---------- CSS class coverage ----------
 css = ''.join(s.string or '' for s in soup.find_all('style'))
+# Include locally linked stylesheets as well as inline styles. This matters now
+# that the site uses a shared visual-system stylesheet across all pages.
+for link in soup.find_all('link', rel=lambda value: value and 'stylesheet' in value):
+    href = link.get('href', '')
+    if href.startswith(('http://', 'https://', 'data:')):
+        continue
+    local_css = os.path.join(root, href.lstrip('/'))
+    if os.path.isfile(local_css):
+        try:
+            css += open(local_css, encoding='utf-8').read()
+        except OSError:
+            pass
 defined = set(re.findall(r'\.([A-Za-z_][\w\\:.\-]*)', css.replace('\\:', ':').replace('\\.', '.')))
 defined = {re.sub(r':(hover|focus|focus-visible|active|before|after)$','',d.replace('\\', '')) for d in defined} | {d.replace('\\', '') for d in defined}
 used = set()
