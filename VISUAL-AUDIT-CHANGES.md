@@ -34,3 +34,10 @@
 - Rewrote all six text-only Featured Picks summaries with product-specific decision guidance.
 - Preserved ASINs, affiliate links, product image paths, and disclosure language; no hands-on testing or unsupported performance claims were introduced.
 - See `SEO-CONVERSION-REVIEW.md` for scope and remaining verification steps.
+
+
+## Homepage hero and Black Friday layout revision (November 2026)
+- Rebuilt the homepage hero's desktop composition as a dedicated readable copy area plus a separate right-side cover image region; the heading, description and trust points no longer compete with the busy part of the photo.
+- Kept the mobile hero as a clean solid sage panel with a vertically stacked trust list.
+- Restyled the Black Friday landing page with a lighter editorial hero, improved heading hierarchy, clearer date treatment, consistent notice panel, balanced product cards and full-width card CTAs.
+- Added tablet/mobile breakpoints and reduced-motion handling. No screenshot or generated image was used as page content.

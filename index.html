@@ -397,6 +397,41 @@ footer{margin-top:1.25rem;background:#006b68!important;color:#fff!important;bord
 }
 @media(min-width:761px) and (max-width:1050px){.hero-band{background-position:82% center!important}.hero-band:after{background:linear-gradient(90deg,#f8fbf9 0%,#f8fbf9 54%,rgba(248,251,249,.92) 72%,rgba(248,251,249,.1) 100%)!important}}
 </style>
+
+<style id="shp-hero-layout-final-2026">
+/* Final homepage hero: separate readable copy from the cover image. */
+.hero-band{
+  min-height:320px!important; display:flex!important; align-items:stretch!important;
+  background-color:#eaf3ef!important;
+  background-image:linear-gradient(90deg,#eaf3ef 0%,#eaf3ef 46%,rgba(234,243,239,.96) 54%,rgba(234,243,239,.58) 65%,rgba(234,243,239,0) 78%),url('images/hero-kitchen.webp')!important;
+  background-position:center,right center!important; background-size:100% 100%,54% 100%!important;
+  background-repeat:no-repeat!important; overflow:hidden!important;
+}
+.hero-band:after{display:none!important}
+.hero-inner{width:min(100% - 2.5rem,1200px)!important;max-width:1200px!important;margin:0 auto!important;padding:2.65rem 0!important;z-index:1!important}
+.hero-inner h1{width:52%!important;max-width:600px!important;font-size:clamp(2.25rem,3.3vw,3.15rem)!important;line-height:1.06!important;letter-spacing:-.045em!important;color:#123b35!important;text-wrap:balance}
+.hero-inner>p{width:49%!important;max-width:550px!important;margin:.9rem 0 0!important;font-size:1.05rem!important;line-height:1.6!important;color:#334b45!important}
+.hero-trust{width:52%!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:.8rem!important;margin:1.35rem 0 0!important;align-items:start!important}
+.hero-trust li{display:flex!important;align-items:center!important;gap:.5rem!important;max-width:none!important;min-width:0!important;font-size:.8rem!important;line-height:1.35!important;color:#24443d!important}
+.hero-trust li span:last-child{display:block!important}
+.trust-icon{flex:0 0 2rem!important;width:2rem!important;height:2rem!important}
+@media(max-width:900px){
+ .hero-band{min-height:300px!important;background-size:100% 100%,58% 100%!important;background-image:linear-gradient(90deg,#eaf3ef 0%,#eaf3ef 48%,rgba(234,243,239,.93) 60%,rgba(234,243,239,.22) 82%,transparent 100%),url('images/hero-kitchen.webp')!important}
+ .hero-inner h1{width:58%!important;font-size:clamp(2rem,4.2vw,2.7rem)!important}
+ .hero-inner>p,.hero-trust{width:57%!important}
+ .hero-trust{grid-template-columns:1fr!important;gap:.5rem!important}
+}
+@media(max-width:640px){
+ .hero-band{min-height:0!important;background:#eaf3ef!important;background-image:none!important}
+ .hero-inner{width:100%!important;padding:2rem 1.15rem 1.75rem!important}
+ .hero-inner h1,.hero-inner>p,.hero-trust{width:100%!important;max-width:100%!important}
+ .hero-inner h1{font-size:clamp(1.95rem,8vw,2.5rem)!important;line-height:1.08!important}
+ .hero-inner>p{font-size:1rem!important;line-height:1.6!important;margin-top:.8rem!important}
+ .hero-trust{display:grid!important;grid-template-columns:1fr!important;gap:.65rem!important;margin-top:1.15rem!important}
+ .hero-trust li{font-size:.86rem!important}
+}
+</style>
+
 </head>
 <body class="bg-stone-50 text-ink antialiased">
 <a class="skip" href="#main">Skip to content</a>
