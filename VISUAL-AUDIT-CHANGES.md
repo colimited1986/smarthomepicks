@@ -19,3 +19,18 @@
 - Before publishing, verify product-image usage rights and confirm that each Amazon listing still corresponds to its stated ASIN/model.
 - Test the pages in a real browser at desktop and mobile widths after deployment.
 - Check the comparison tables and affiliate links after deployment.
+
+
+## Header, Featured Picks and SEO revision
+- Protected the homepage hero text area on desktop and removed the hero photo on mobile to prevent text/background collisions.
+- Changed Featured Picks to a text-only editorial list; decorative pseudo-thumbnails removed.
+- Converted the 24 homepage catalogue placeholders to static HTML image tags using matching local ASIN-named assets.
+- Refined homepage title/description and six Featured Picks summaries.
+- Added SEO-CONVERSION-REVIEW.md with conversion assessment and remaining verification tasks.
+
+## Product narrative conversion rewrite — November 7, 2026
+- Rewrote the lead, buyer-fit, trade-off and expanded buying notes for all 24 product cards in natural American English.
+- Standardized each product's buying notes around practical use case, listed features, limitations, pre-purchase checks and who should consider another option.
+- Rewrote all six text-only Featured Picks summaries with product-specific decision guidance.
+- Preserved ASINs, affiliate links, product image paths, and disclosure language; no hands-on testing or unsupported performance claims were introduced.
+- See `SEO-CONVERSION-REVIEW.md` for scope and remaining verification steps.
