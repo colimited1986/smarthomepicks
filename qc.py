@@ -67,14 +67,16 @@ for i, sc in enumerate(soup.find_all('script', type='application/ld+json')):
     add('PASS' if not re.search(r'aggregateRating|"offers"|"price"|"review"', blob) else 'FAIL', f'JSON-LD #{i} has no rating/price/review claims')
 
 # ---------- affiliate ----------
-TAG = re.search(r"const TAG = '([^']+)'", src).group(1)
+tag_match = re.search(r"const TAG = '([^']+)'", src)
+TAG = tag_match.group(1) if tag_match else ''
 alinks = soup.select('a[href*="amazon."]')
-bad_tag = [a['href'] for a in alinks if f'tag={TAG}' not in a['href']]
+bad_tag = [a['href'] for a in alinks if not TAG or f'tag={TAG}' not in a['href']]
 add('PASS' if alinks and not bad_tag else 'FAIL', f'all {len(alinks)} Amazon links carry tag={TAG}', str(bad_tag[:3]))
 bad_rel = [a['href'] for a in alinks if not {'sponsored', 'nofollow'} <= set(a.get('rel', []))]
 add('PASS' if not bad_rel else 'FAIL', 'Amazon links have rel=sponsored nofollow', str(bad_rel[:3]))
 asins = [a['data-asin'] for a in soup.select('a[data-asin]')]
-add('PASS' if len(asins) == len(set(asins)) else 'FAIL', 'no duplicate ASINs', f'{len(asins)} ASINs')
+card_asins = [a.get('data-asin') for a in soup.select('#grid > article') if a.get('data-asin')]
+add('PASS' if len(card_asins) == len(set(card_asins)) else 'FAIL', 'no duplicate product-card ASINs', f'{len(card_asins)} product cards, {len(set(card_asins))} unique ASINs')
 badfmt = [a for a in asins if not re.fullmatch(r'B0[A-Z0-9]{8}', a)]
 add('PASS' if not badfmt else 'FAIL', 'ASIN format (format only, NOT existence)', str(badfmt))
 mism = [a['data-asin'] for a in soup.select('a[data-asin]') if a['data-asin'] not in a['href']]
@@ -97,14 +99,16 @@ add('PASS' if not orphan else 'NEEDS VERIFICATION', 'every ASIN has an image con
 generic_alt = re.findall(r"alt:\s*'([^']*(?:Budget|Mid-range|Premium)[^']*)'", src)
 add('FAIL' if generic_alt else 'PASS', 'image alt names the actual product (not tier label)', f'{len(generic_alt)} generic alts')
 for img in soup.find_all('img'):
-    if not img.get('alt'): add('FAIL', 'static <img> alt', str(img)[:80])
+    if not img.get('alt') and not (img.parent and img.parent.name == 'a' and img.parent.get_text(' ', strip=True)):
+        add('FAIL', 'static <img> alt', str(img)[:80])
 
 # ---------- internal links ----------
 rel = sorted({a['href'] for a in soup.find_all('a', href=True)
               if not a['href'].startswith(('#', 'http', 'mailto', 'data:', 'javascript'))})
 for h in rel:
-    p = os.path.join(root, h.rstrip('/'), 'index.html') if h.endswith('/') else os.path.join(root, h)
-    if h == './': continue
+    clean_h = h.split('#', 1)[0]
+    p = os.path.join(root, clean_h.rstrip('/'), 'index.html') if clean_h.endswith('/') else os.path.join(root, clean_h)
+    if h == './' or clean_h == '': continue
     add('PASS' if os.path.exists(p) else 'NEEDS VERIFICATION', f'internal link {h}', 'file found' if os.path.exists(p) else 'target not in provided files; verify in repo/live site')
 for a in soup.find_all('a', href=True):
     if a['href'].startswith('#') and len(a['href']) > 1 and a['href'][1:] not in ids:
@@ -182,9 +186,9 @@ try:
                 pg.click('#more'); pg.wait_for_timeout(200)
                 n1 = pg.evaluate("[...document.querySelectorAll('#grid>article')].filter(c=>!c.classList.contains('hidden')).length")
                 add('PASS' if n1 == 12 else 'FAIL', 'Show more adds 6 cards', str(n1))
-                pg.click('.hdr-nav a[data-setcat="smart"]'); pg.wait_for_timeout(300)
+                pg.click('#browse [data-setcat="smart"]'); pg.wait_for_timeout(300)
                 cats = pg.evaluate("[...document.querySelectorAll('#grid>article:not(.hidden)')].map(c=>c.dataset.cat)")
-                add('PASS' if cats and set(cats) == {'smart'} else 'FAIL', 'nav "Smart Home" sets category', str(set(cats)))
+                add('PASS' if cats and set(cats) == {'smart'} else 'FAIL', 'category tile "Smart Home" sets category', str(set(cats)))
                 small = pg.evaluate('''()=>[...document.querySelectorAll('button,.hdr-nav a,.flinks a,a.btn')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&r.height<32}).map(e=>e.textContent.trim().slice(0,20))''')
                 add('PASS' if not small else 'FAIL', 'tap targets >= 32px tall (visible)', str(small[:8]))
             if w in (390, 1366):

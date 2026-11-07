@@ -2,7 +2,7 @@
 """Run from the repo root. Lists the homepage plus every folder (including nested ones such as guides/*) that really contains an index.html.
 Usage: python3 make_sitemap.py [base_url]"""
 import os, sys, datetime
-base = (sys.argv[1] if len(sys.argv) > 1 else 'https://colimited1986.github.io/smarthomepicks/').rstrip('/') + '/'
+base = (sys.argv[1] if len(sys.argv) > 1 else 'https://smarthomepicks.online/').rstrip('/') + '/'
 skip = {'.git', '.github', 'images', 'node_modules', 'assets', 'css', 'js'}
 urls = [base]
 for dirpath, dirnames, _files in sorted(os.walk('.')):

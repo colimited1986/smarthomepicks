@@ -1,4 +1,4 @@
-# SmartHomePicks — Black Friday / Cyber Monday deployment checklist
+# SmartHome Picks — Black Friday / Cyber Monday deployment checklist
 
 Prepared: 2026-11-06
 
