@@ -434,7 +434,16 @@ footer{margin-top:1.25rem;background:#006b68!important;color:#fff!important;bord
         #featured .fp[hidden]{display:none!important}
         #featured .fp-pagination button:disabled{opacity:.45;cursor:not-allowed}
         @media(max-width:640px){#featured .fp-pagination{justify-content:flex-start}}
-        </style></head>
+        </style>
+<style id="homepage-carousel-pagination">
+.latest-articles-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.latest-article-card[hidden],#grid article[hidden],#featured .fp[hidden]{display:none!important}
+.latest-pagination button:disabled,.product-pagination button:disabled,#featured .fp-pagination button:disabled{opacity:.45;cursor:not-allowed!important}
+#grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:760px){.latest-articles-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:520px){.latest-articles-grid{grid-template-columns:1fr}#grid{grid-template-columns:1fr!important}}
+</style>
+</head>
 <body class="bg-stone-50 text-ink antialiased">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="site-header-inner"><a class="site-brand" href="/">SmartHome <span>Picks</span></a><nav aria-label="Main navigation" class="site-nav"><a href="/">Home</a><a href="/#latest-articles">Latest Articles</a><a href="/compare/">Compare</a><a href="/black-friday-deals/">Black Friday &amp; Cyber Monday</a><a href="/#gift-guides">Buying Guides</a><a href="/#browse">Categories</a><a href="/why-trust/">Why Trust</a><a href="/faq/">FAQ</a></nav></div></header>
@@ -449,31 +458,36 @@ footer{margin-top:1.25rem;background:#006b68!important;color:#fff!important;bord
 <p style="margin:0 0 .4rem;color:#0f766e;font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase">Latest Reviews &amp; Guides</p>
 <h2 id="latest-articles-title" style="margin:0 0 .7rem;color:#18312d;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.2">Explore Our Latest Product Reviews</h2>
 <p style="max-width:760px;margin:0 0 1.5rem;color:#5c6c67">Compare features and practical considerations before choosing your next kitchen upgrade.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1rem">
-<article style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
+<div class="latest-articles-grid" id="latest-articles-grid">
+<article class="latest-article-card" style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
 <p style="margin:0 0 .5rem;color:#0f766e;font-size:.78rem;font-weight:800;text-transform:uppercase">Ninja · Air Fryer Oven</p>
 <h3 style="margin:0 0 .75rem;color:#18312d;font-size:1.1rem;line-height:1.35">Ninja French Door Premier Air Fry Oven (FO101) Review</h3>
 <p style="margin:0 0 1rem;color:#5c6c67;font-size:.95rem">Explore its 10-in-1 cooking concept and spacious 20.3-quart capacity.</p>
 <a href="/articles/ninja-french-door-premier-air-fry-oven-fo101-review-a-versatile-10-in-1-air-b0fm5kf34g.html" style="margin-top:auto;color:#0f766e;font-weight:750;text-decoration:none">Read the review →</a>
 </article>
-<article style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
+<article class="latest-article-card" style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
 <p style="margin:0 0 .5rem;color:#0f766e;font-size:.78rem;font-weight:800;text-transform:uppercase">Ninja · 5-Quart Air Fryer</p>
 <h3 style="margin:0 0 .75rem;color:#18312d;font-size:1.1rem;line-height:1.35">Ninja Air Fryer Pro AF141 Review</h3>
 <p style="margin:0 0 1rem;color:#5c6c67;font-size:.95rem">Review the 4-in-1 functions, capacity, and everyday kitchen considerations.</p>
 <a href="/articles/ninja-air-fryer-pro-af141-review-versatile-5-quart-4-in-1-kitchen-appliance-b0csz7wbyw.html" style="margin-top:auto;color:#0f766e;font-weight:750;text-decoration:none">Read the review →</a>
 </article>
-<article style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
+<article class="latest-article-card" style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
 <p style="margin:0 0 .5rem;color:#0f766e;font-size:.78rem;font-weight:800;text-transform:uppercase">Cosori · 6-Quart Air Fryer</p>
 <h3 style="margin:0 0 .75rem;color:#18312d;font-size:1.1rem;line-height:1.35">Cosori TurboBlaze 9-in-1 Air Fryer Review</h3>
 <p style="margin:0 0 1rem;color:#5c6c67;font-size:.95rem">See the main features of its 6-quart basket and nine cooking functions.</p>
 <a href="/articles/cosori-turboblaze-9-in-1-air-fryer-review-a-versatile-6-quart-option-with-p-b0c33chg99.html" style="margin-top:auto;color:#0f766e;font-weight:750;text-decoration:none">Read the review →</a>
 </article>
-<article style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
+<article class="latest-article-card" style="background:#fff;border:1px solid #dfe8e4;border-radius:16px;padding:1.25rem;display:flex;flex-direction:column">
 <p style="margin:0 0 .5rem;color:#0f766e;font-size:.78rem;font-weight:800;text-transform:uppercase">Emeril Lagasse · French Door Oven</p>
 <h3 style="margin:0 0 .75rem;color:#18312d;font-size:1.1rem;line-height:1.35">Emeril Lagasse 26QT French Door Air Fryer Toaster Oven Review</h3>
 <p style="margin:0 0 1rem;color:#5c6c67;font-size:.95rem">Consider the extra-large capacity, cooking modes, and countertop space needed.</p>
 <a href="/articles/emeril-lagasse-26qt-french-door-air-fryer-toaster-oven-combo-review-versati-b09b7sb46r.html" style="margin-top:auto;color:#0f766e;font-weight:750;text-decoration:none">Read the review →</a>
 </article>
+</div>
+<div class="latest-pagination" aria-label="Latest article pages" style="display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem">
+<button aria-label="Previous articles" disabled id="articles-prev" type="button" style="border:1px solid #cbd8d3;border-radius:999px;padding:.65rem 1rem;background:#fff;color:#18312d;font-weight:700;cursor:pointer">← Previous</button>
+<span aria-live="polite" id="articles-page-status" style="color:#5c6c67;font-size:.9rem">Page 1 of 2</span>
+<button aria-label="Next articles" id="articles-next" type="button" style="border:0;border-radius:999px;padding:.65rem 1rem;background:#0f766e;color:#fff;font-weight:700;cursor:pointer">Next articles →</button>
 </div>
 <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #dfe8e4">
 <h3 style="margin:0 0 .75rem;color:#18312d;font-size:1.2rem">More Smart Home Buying Guides</h3>
@@ -881,7 +895,11 @@ footer{margin-top:1.25rem;background:#006b68!important;color:#fff!important;bord
 </article>
 </div>
 <div class="hidden text-center text-stone-600 py-12" id="empty"><p>Nothing matches that combination yet.</p><button class="mt-3 text-sm font-semibold text-accent hover:underline" id="emptyReset" type="button">Clear search and filters</button></div>
-<button class="btn2 hidden" id="more" type="button">Show more picks</button>
+<div aria-label="Editor’s Picks product pages" class="product-pagination" id="product-pagination" style="display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem">
+<button aria-label="Previous editor picks" disabled id="products-prev" type="button" style="border:1px solid #cbd8d3;border-radius:999px;padding:.65rem 1rem;background:#fff;color:#18312d;font-weight:700;cursor:pointer">← Previous</button>
+<span aria-live="polite" id="products-page-status" style="color:#5c6c67;font-size:.9rem">Page 1</span>
+<button aria-label="Next editor picks" id="products-next" type="button" style="border:0;border-radius:999px;padding:.65rem 1rem;background:#0f766e;color:#fff;font-weight:700;cursor:pointer">Next products →</button>
+</div>
 </section></div><aside aria-label="Featured product recommendations" class="home-sidebar"><section aria-labelledby="feat-h" class="" id="featured">
 <p class="top-disclosure mb-5"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Our Amazon links are affiliate links, so we may earn a commission at no extra cost to you. <a href="affiliate-disclosure/">Read the full disclosure</a>.</p>
 <div class="flex flex-wrap items-baseline justify-between gap-2">
@@ -1117,7 +1135,7 @@ document.querySelectorAll('#grid > article').forEach(card => {
   box.appendChild(img);
 });
 
-const PAGE = 6;
+const PAGE = 3;
 const $ = id => document.getElementById(id);
 const grid = $('grid');
 const cards = [...grid.children].filter(el => el.tagName === 'ARTICLE');
@@ -1134,7 +1152,7 @@ const tokens = s => s.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split(/[\s-]+/
 // _i is the card's position in the page, so ties always break the same way (no random ordering)
 cards.forEach((c, i) => { c._i = i; c._w = new Set(tokens(c.dataset.kw + ' ' + c.querySelector('h3').textContent.replace(/french door|air plus/gi, m => m.replace(' ', '')))); });
 
-const state = { goal: null, cat: null, tier: null, q: '', limit: PAGE };
+const state = { goal: null, cat: null, tier: null, q: '', page: 0 };
 const isValue = c => c.dataset.tier === 'value' ? 1 : 0;
 
 function score(c, toks) {
@@ -1164,7 +1182,9 @@ function render() {
   const seen = {};
   sc.sort((a, b) => b[1] - a[1] || isValue(b[0]) - isValue(a[0]) || a[0]._i - b[0]._i).forEach(x => { const k = x[0].dataset.type; x[2] = seen[k] || 0; seen[k] = x[2] + 1; });
   list = sc.sort((a, b) => a[2] - b[2] || b[1] - a[1] || a[0]._i - b[0]._i).map(x => x[0]);
-  const shown = list.slice(0, state.limit);
+  const pages = Math.max(1, Math.ceil(list.length / PAGE));
+  if (state.page >= pages) state.page = pages - 1;
+  const shown = list.slice(state.page * PAGE, (state.page + 1) * PAGE);
   cards.forEach(c => c.classList.add('hidden'));
   list.forEach(c => grid.appendChild(c));
   shown.forEach(c => c.classList.remove('hidden'));
@@ -1176,20 +1196,22 @@ function render() {
     : 'Editor’s Picks';
   $('empty').classList.toggle('hidden', list.length > 0);
   $('reset').classList.toggle('hidden', !filtered);
-  const rest = list.length - shown.length;
-  $('more').classList.toggle('hidden', rest <= 0);
-  $('more').textContent = 'Show ' + Math.min(PAGE, rest) + ' more pick' + (Math.min(PAGE, rest) === 1 ? '' : 's') + ' (' + rest + ' left)';
+  $('products-page-status').textContent = 'Page ' + (state.page + 1) + ' of ' + pages;
+  $('products-prev').disabled = state.page <= 0;
+  $('products-next').disabled = state.page >= pages - 1;
+  $('products-next').textContent = state.page >= pages - 1 ? 'No more products' : 'Next products →';
 }
-function setQ(v) { state.q = v; state.limit = PAGE; $('q').value = v; render(); }
+function setQ(v) { state.q = v; state.page = 0; $('q').value = v; render(); }
 
-chips.forEach(b => b.onclick = () => { const k = b.dataset.key; state[k] = state[k] === b.dataset.id ? null : b.dataset.id; state.limit = PAGE; render(); });
-document.querySelectorAll('[data-setcat]').forEach(b => b.onclick = () => { state.cat = b.dataset.setcat; state.limit = PAGE; render(); $('results').scrollIntoView({ behavior: 'smooth' }); });
+chips.forEach(b => b.onclick = () => { const k = b.dataset.key; state[k] = state[k] === b.dataset.id ? null : b.dataset.id; state.page = 0; render(); });
+document.querySelectorAll('[data-setcat]').forEach(b => b.onclick = () => { state.cat = b.dataset.setcat; state.page = 0; render(); $('results').scrollIntoView({ behavior: 'smooth' }); });
 document.querySelectorAll('.ex').forEach(b => b.onclick = () => { setQ(b.dataset.q); $('results').scrollIntoView({ behavior: 'smooth' }); });
-let t; $('q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; state.limit = PAGE; render(); }, 150); });
-$('sform').onsubmit = e => { e.preventDefault(); state.q = $('q').value; state.limit = PAGE; render(); $('results').scrollIntoView({ behavior: 'smooth' }); };
-$('more').onclick = () => { state.limit += PAGE; render(); };
+let t; $('q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; state.page = 0; render(); }, 150); });
+$('sform').onsubmit = e => { e.preventDefault(); state.q = $('q').value; state.page = 0; render(); $('results').scrollIntoView({ behavior: 'smooth' }); };
+$('products-prev').onclick = () => { if (state.page > 0) { state.page--; render(); $('results').scrollIntoView({ behavior: 'smooth', block: 'start' }); } };
+$('products-next').onclick = () => { state.page++; render(); $('results').scrollIntoView({ behavior: 'smooth', block: 'start' }); };
 $('hform').onsubmit = e => { e.preventDefault(); setQ($('hq').value); $('results').scrollIntoView({ behavior: 'smooth' }); };
-const clearAll = () => { state.goal = state.cat = state.tier = null; setQ(''); };
+const clearAll = () => { state.goal = state.cat = state.tier = null; state.page = 0; setQ(''); };
 $('reset').onclick = clearAll;
 $('emptyReset').onclick = clearAll;
 $('yr').textContent = new Date().getFullYear();
@@ -1228,5 +1250,27 @@ document.addEventListener('DOMContentLoaded', function () {
   next.addEventListener('click', function() { if (page < pages - 1) { page++; render(); } });
   render();
 });
-</script></body>
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var grid = document.getElementById('latest-articles-grid');
+  var prev = document.getElementById('articles-prev');
+  var next = document.getElementById('articles-next');
+  var status = document.getElementById('articles-page-status');
+  if (!grid || !prev || !next || !status) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.latest-article-card'));
+  var perPage = 3, page = 0, pages = Math.max(1, Math.ceil(cards.length / perPage));
+  function renderArticles() {
+    cards.forEach(function(card, i) { card.hidden = !(i >= page * perPage && i < (page + 1) * perPage); });
+    status.textContent = 'Page ' + (page + 1) + ' of ' + pages;
+    prev.disabled = page === 0;
+    next.disabled = page >= pages - 1;
+    next.textContent = page >= pages - 1 ? 'No more articles' : 'Next articles →';
+  }
+  prev.addEventListener('click', function() { if (page > 0) { page--; renderArticles(); } });
+  next.addEventListener('click', function() { if (page < pages - 1) { page++; renderArticles(); } });
+  renderArticles();
+});
+</script>
+</body>
 </html>
