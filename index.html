@@ -154,6 +154,9 @@ button[data-setcat].text-sm,#browse a.inline-block{padding:.45rem 0}
 .fp-cta{display:block;margin-top:.75rem;text-align:center;background:#0f766e;color:#fff;font-weight:600;font-size:.875rem;border-radius:.75rem;padding:.7rem .5rem}
 .fp-cta:hover{background:#115e59}
 @media(min-width:640px){.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Critical pagination fix: hidden product cards must stay hidden even when they also use .flex. */
+#grid > article.hidden { display: none !important; }
 </style>
 <style>
 /* SmartHome Picks visual system — shared with comparison pages */
