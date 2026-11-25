@@ -35,14 +35,18 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
 </div></section>
 <main>
 <div class="notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate, SmartHome Picks earns from qualifying purchases. Links on this page may earn us a commission at no extra cost to you. Please confirm the current price, model, seller, and availability on Amazon before purchasing.</div>
-<div class="toolbar">
-<label for="category-filter">Filter products by category</label>
-<select id="category-filter"><option value="all">All products (28)</option><option>Kitchen &amp; Air Fryers</option><option>Smart Home &amp; Security</option><option>Tablets &amp; Computing</option><option>Audio &amp; Entertainment</option><option>Gaming &amp; Entertainment</option><option>Beauty &amp; Skincare</option></select>
-<span class="count" id="product-count">Showing 28 products</span>
+<div class="toolbar" style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap">
+<label for="product-sort">Sort products</label>
+<select id="product-sort" aria-label="Sort products">
+<option value="newer" selected>Newer articles</option>
+<option value="older">Older articles</option>
+<option value="az">A–Z</option>
+</select>
+<span class="count" id="product-count" aria-live="polite">Showing 28 products</span>
 </div>
 <section class="product-grid" id="product-grid" aria-label="All Black Friday product picks">
 
-      <article class="product-card" data-category="Kitchen &amp; Air Fryers">
+      <article class="product-card" data-published="2026-11-24" data-category="Kitchen &amp; Air Fryers">
         <a class="product-image" href="https://www.amazon.com/dp/B0FM5KF34G?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Ninja French Door Premier Air Fry Oven FO101 on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81Mu52p+uwL._AC_SL1500_.jpg" alt="Ninja French Door Premier Air Fry Oven FO101" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -56,7 +60,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Gaming &amp; Entertainment">
+      <article class="product-card" data-published="2026-11-23" data-category="Gaming &amp; Entertainment">
         <a class="product-image" href="https://www.amazon.com/dp/B0HGHB3V16?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Nintendo Switch 2 + Mario Kart World Bundle on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81NM3JB89pL._SL1500_.jpg" alt="Nintendo Switch 2 + Mario Kart World Bundle" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -70,7 +74,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Kitchen &amp; Air Fryers">
+      <article class="product-card" data-published="2026-11-22" data-category="Kitchen &amp; Air Fryers">
         <a class="product-image" href="https://www.amazon.com/dp/B0GSB2BBV2?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Midea Flexify Slim 8-in-1 French Door Toaster Oven Air Fryer on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71COlQ+b1sL._AC_SL1500_.jpg" alt="Midea Flexify Slim 8-in-1 French Door Toaster Oven Air Fryer" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -84,7 +88,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Smart Home &amp; Security">
+      <article class="product-card" data-published="2026-11-21" data-category="Smart Home &amp; Security">
         <a class="product-image" href="https://www.amazon.com/dp/B0G62ZV449?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Blink Battery Doorbell 2K+ on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61mxVUkCfXL._SL1500_.jpg" alt="Blink Battery Doorbell 2K+" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -98,7 +102,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Smart Home &amp; Security">
+      <article class="product-card" data-published="2026-11-20" data-category="Smart Home &amp; Security">
         <a class="product-image" href="https://www.amazon.com/dp/B0FN7GC1TJ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Google Nest Doorbell (3rd Gen, Wired) on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71yqRKpJ+jL._AC_SL1500_.jpg" alt="Google Nest Doorbell (3rd Gen, Wired)" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -112,7 +116,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Tablets &amp; Computing">
+      <article class="product-card" data-published="2026-11-19" data-category="Tablets &amp; Computing">
         <a class="product-image" href="https://www.amazon.com/dp/B0GQVPX1PJ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Apple iPad Air 11-inch (M4), 128GB on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81SUwEfZYfL._AC_SL1500_.jpg" alt="Apple iPad Air 11-inch (M4), 128GB" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -126,7 +130,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Tablets &amp; Computing">
+      <article class="product-card" data-published="2026-11-18" data-category="Tablets &amp; Computing">
         <a class="product-image" href="https://www.amazon.com/dp/B0GYN3WFW1?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check MEBERRY 10.36-Inch 2K Android Tablet on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71eecTfeEQL._AC_SL1500_.jpg" alt="MEBERRY 10.36-Inch 2K Android Tablet" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -140,7 +144,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Tablets &amp; Computing">
+      <article class="product-card" data-published="2026-11-17" data-category="Tablets &amp; Computing">
         <a class="product-image" href="https://www.amazon.com/dp/B0DZ77D5HL?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Apple iPad 11-Inch on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81yW4V07UbL._AC_SL1500_.jpg" alt="Apple iPad 11-Inch" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -154,7 +158,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Audio &amp; Entertainment">
+      <article class="product-card" data-published="2026-11-16" data-category="Audio &amp; Entertainment">
         <a class="product-image" href="https://www.amazon.com/dp/B0876H4X8X?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Sonos Five Wireless Hi-Fi Speaker on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/S/aplus-media-library-service-media/abdc5a4c-29e7-4d2a-8fad-3964d1befba4.__CR0,0,1200,900_PT0_SX600_V1___.jpg" alt="Sonos Five Wireless Hi-Fi Speaker" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -168,7 +172,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Smart Home &amp; Security">
+      <article class="product-card" data-published="2026-11-15" data-category="Smart Home &amp; Security">
         <a class="product-image" href="https://www.amazon.com/dp/B09B8V1LZ3?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Amazon Echo Dot (5th Gen, 2022 Release) on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61J2sQtBYDL._UF800,800_QL80_FMwebp_.jpg" alt="Amazon Echo Dot (5th Gen, 2022 Release)" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -182,7 +186,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Smart Home &amp; Security">
+      <article class="product-card" data-published="2026-11-14" data-category="Smart Home &amp; Security">
         <a class="product-image" href="https://www.amazon.com/dp/B0HB43Y11Z?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check SwitchBot Video Doorbell with 4.3-Inch Color Display on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61U1uk7QnUL._AC_SL1500_.jpg" alt="SwitchBot Video Doorbell with 4.3-Inch Color Display" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -196,7 +200,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Audio &amp; Entertainment">
+      <article class="product-card" data-published="2026-11-13" data-category="Audio &amp; Entertainment">
         <a class="product-image" href="https://www.amazon.com/dp/B088685QVJ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Edifier R1280Ts Powered Bookshelf Speakers on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71kzQ1lgpqL._AC_SL1500_.jpg" alt="Edifier R1280Ts Powered Bookshelf Speakers" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -210,7 +214,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Kitchen &amp; Air Fryers">
+      <article class="product-card" data-published="2026-11-11" data-category="Kitchen &amp; Air Fryers">
         <a class="product-image" href="https://www.amazon.com/dp/B0CSZ7WBYW?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Ninja Air Fryer Pro AF141, 5-Quart on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71jfzcXideL._AC_SL1500_.jpg" alt="Ninja Air Fryer Pro AF141, 5-Quart" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -224,7 +228,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Kitchen &amp; Air Fryers">
+      <article class="product-card" data-published="2026-11-10" data-category="Kitchen &amp; Air Fryers">
         <a class="product-image" href="https://www.amazon.com/dp/B0C33CHG99?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check COSORI TurboBlaze 6-Quart 9-in-1 Air Fryer on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/8126AwSQZBL._AC_SL1500_.jpg" alt="COSORI TurboBlaze 6-Quart 9-in-1 Air Fryer" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -238,7 +242,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Kitchen &amp; Air Fryers">
+      <article class="product-card" data-published="2026-11-09" data-category="Kitchen &amp; Air Fryers">
         <a class="product-image" href="https://www.amazon.com/dp/B09B7SB46R?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Emeril Lagasse 26QT French Door Air Fryer Toaster Oven on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81AUxm--7pL._AC_SL1500_.jpg" alt="Emeril Lagasse 26QT French Door Air Fryer Toaster Oven" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -253,7 +257,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
         </div>
       </article>
 
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0FSJQ3KJT?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Anua Salmon DNA PDRN Glow Essential Starter Kit Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71YVdkGE+YL._SL1500_.jpg" alt="Anua Salmon DNA PDRN Glow Essential Starter Kit Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -267,7 +271,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B00949CTQQ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Paula&#x27;s Choice 2% BHA Liquid Exfoliant Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61RHq4MT34L._SL1500_.jpg" alt="Paula&#x27;s Choice 2% BHA Liquid Exfoliant Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -281,7 +285,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0G42F3X4T?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check ALASTIN Restorative Skin Complex Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71yOQuedB3L._SL1500_.jpg" alt="ALASTIN Restorative Skin Complex Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -295,7 +299,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0BHV8XGG5?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check MEDIHEAL Teatree Trouble Care Toner Pads Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51gHhrSxgDL._SL1200_.jpg" alt="MEDIHEAL Teatree Trouble Care Toner Pads Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -309,7 +313,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0DMTDN158?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check The Ordinary Glycolic Acid 7% Toner Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51maLJWzPyL._SL1240_.jpg" alt="The Ordinary Glycolic Acid 7% Toner Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -323,7 +327,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B09V7Z4TJG?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Medicube Zero Pore Pad 2.0 Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71d0-yxSvhL._SL1500_.jpg" alt="Medicube Zero Pore Pad 2.0 Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -337,7 +341,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0BPTH8RC3?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Philosophy Microdelivery Facial Wash Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61YBSU76AXL._SL1500_.jpg" alt="Philosophy Microdelivery Facial Wash Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -351,7 +355,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0DHVCFZS3?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check philosophy Purity Made Simple Facial Cleanser Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/618d64PMxXL._SL1500_.jpg" alt="philosophy Purity Made Simple Facial Cleanser Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -365,7 +369,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0DJ1D917P?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check MEDIHEAL Madecassoside Essential Face Sheet Mask Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61lHKqgpZyL._SL1200_.jpg" alt="MEDIHEAL Madecassoside Essential Face Sheet Mask Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -379,7 +383,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0GD6R7CFJ?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check BIODANCE Hydrogel Eye Patches Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61jB74Wpd5L._SL1000_.jpg" alt="BIODANCE Hydrogel Eye Patches Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -393,7 +397,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0BRMYHMS5?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check Medicube Collagen Wrapping Mask Review | Overnight Peel-Off Mask on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/71WBNUnt22L._SL1500_.jpg" alt="Medicube Collagen Wrapping Mask Review | Overnight Peel-Off Mask" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -407,7 +411,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B0B2RM68G2?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check BIODANCE Bio-Collagen Real Deep Mask Review on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/610IgxQeWyL._SL1280_.jpg" alt="BIODANCE Bio-Collagen Real Deep Mask Review" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -421,7 +425,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
           </div>
         </div>
       </article>
-      <article class="product-card" data-category="Beauty &amp; Skincare">
+      <article class="product-card" data-published="2026-11-25" data-category="Beauty &amp; Skincare">
         <a class="product-image" href="https://www.amazon.com/dp/B09S6JKB52?tag=blackfridaycheapdeals-20" target="_blank" rel="sponsored nofollow noopener" aria-label="Check SKIN1004 Centella Travel Kit Review: 5-Piece Korean Skincare Set on Amazon">
           <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81ZIWBosabL._SL1500_.jpg" alt="SKIN1004 Centella Travel Kit Review: 5-Piece Korean Skincare Set" loading="lazy" onerror="this.style.opacity='.15'">
         </a>
@@ -441,7 +445,7 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
 <div id="product-page-numbers" style="display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center"></div>
 <button type="button" id="products-next" aria-label="Next page" class="primary" style="border:0;cursor:pointer">Next →</button>
 </nav>
-<p class="empty" id="empty-state">No products in this category.</p>
+<p class="empty" id="empty-state">No products found.</p>
 </main>
 <footer><div class="footer-inner">
 <p><strong>SmartHome Picks</strong> · Black Friday &amp; Cyber Monday 2026</p>
@@ -450,8 +454,9 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
 </div></footer>
 <script>
 (function(){
- const filter=document.getElementById('category-filter');
- const cards=Array.from(document.querySelectorAll('.product-card'));
+ const sort=document.getElementById('product-sort');
+ const grid=document.getElementById('product-grid');
+ const cards=Array.from(grid.querySelectorAll('.product-card'));
  const count=document.getElementById('product-count');
  const empty=document.getElementById('empty-state');
  const pagination=document.getElementById('product-pagination');
@@ -459,33 +464,51 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
  const prev=document.getElementById('products-prev');
  const next=document.getElementById('products-next');
  const perPage=9;
- let page=0, filtered=cards.slice();
+ let page=0;
+ function sortCards(){
+   const mode=sort.value;
+   cards.sort(function(a,b){
+     const titleA=(a.querySelector('h2')?.textContent||'').trim();
+     const titleB=(b.querySelector('h2')?.textContent||'').trim();
+     const dateA=a.dataset.published||'2000-01-01';
+     const dateB=b.dataset.published||'2000-01-01';
+     if(mode==='az') return titleA.localeCompare(titleB,undefined,{sensitivity:'base'});
+     if(mode==='older') return dateA.localeCompare(dateB)||titleA.localeCompare(titleB,undefined,{sensitivity:'base'});
+     return dateB.localeCompare(dateA)||titleA.localeCompare(titleB,undefined,{sensitivity:'base'});
+   });
+   cards.forEach(card=>grid.appendChild(card));
+   page=0;
+   render();
+ }
  function render(){
-   const value=filter.value;
-   filtered=cards.filter(card=>value==='all'||card.dataset.category===value);
-   const pages=Math.max(1,Math.ceil(filtered.length/perPage));
+   const pages=Math.max(1,Math.ceil(cards.length/perPage));
    if(page>=pages) page=pages-1;
-   cards.forEach(card=>card.hidden=true);
-   filtered.forEach((card,i)=>{card.hidden=!(i>=page*perPage&&i<(page+1)*perPage);});
-   count.textContent='Showing '+(filtered.length?Math.min(page*perPage+1,filtered.length):0)+'–'+Math.min((page+1)*perPage,filtered.length)+' of '+filtered.length+' products';
-   empty.style.display=filtered.length?'none':'block';
-   pagination.hidden=filtered.length<=perPage;
+   cards.forEach((card,i)=>{card.hidden=!(i>=page*perPage&&i<(page+1)*perPage);});
+   const first=cards.length?page*perPage+1:0;
+   const last=Math.min((page+1)*perPage,cards.length);
+   count.textContent='Showing '+first+'–'+last+' of '+cards.length+' products';
+   empty.style.display=cards.length?'none':'block';
+   pagination.hidden=pages<=1;
    numbers.innerHTML='';
    for(let i=0;i<pages;i++){
-     const b=document.createElement('button');
-     b.type='button'; b.textContent=String(i+1); b.setAttribute('aria-label','Page '+(i+1));
-     b.setAttribute('aria-current',i===page?'page':'false');
-     b.style.cssText='min-width:40px;border:1px solid '+(i===page?'#008f83':'#b9cbc5')+';border-radius:9px;padding:9px 12px;background:'+(i===page?'#008f83':'#fff')+';color:'+(i===page?'#fff':'#1b302e')+';font:inherit;font-weight:750;cursor:pointer';
-     b.addEventListener('click',()=>{page=i;render();document.getElementById('product-grid').scrollIntoView({behavior:'smooth',block:'start'});});
-     numbers.appendChild(b);
+     const button=document.createElement('button');
+     button.type='button';
+     button.textContent=String(i+1);
+     button.setAttribute('aria-label','Page '+(i+1));
+     if(i===page) button.setAttribute('aria-current','page');
+     button.style.cssText='min-width:40px;border:1px solid '+(i===page?'#008f83':'#b9cbc5')+';border-radius:9px;padding:9px 12px;background:'+(i===page?'#008f83':'#fff')+';color:'+(i===page?'#fff':'#1b302e')+';font:inherit;font-weight:750;cursor:pointer';
+     button.addEventListener('click',function(){page=i;render();grid.scrollIntoView({behavior:'smooth',block:'start'});});
+     numbers.appendChild(button);
    }
-   prev.disabled=page===0; next.disabled=page>=pages-1;
-   prev.style.opacity=prev.disabled?'.45':'1'; next.style.opacity=next.disabled?'.45':'1';
+   prev.disabled=page===0;
+   next.disabled=page>=pages-1;
+   prev.style.opacity=prev.disabled?'.45':'1';
+   next.style.opacity=next.disabled?'.45':'1';
  }
- filter.addEventListener('change',()=>{page=0;render();});
- prev.addEventListener('click',()=>{if(page>0){page--;render();}});
- next.addEventListener('click',()=>{if(page<Math.ceil(filtered.length/perPage)-1){page++;render();}});
- render();
+ sort.addEventListener('change',sortCards);
+ prev.addEventListener('click',function(){if(page>0){page--;render();grid.scrollIntoView({behavior:'smooth',block:'start'});}});
+ next.addEventListener('click',function(){if(page<Math.ceil(cards.length/perPage)-1){page++;render();grid.scrollIntoView({behavior:'smooth',block:'start'});}});
+ sortCards();
 })();
 </script>
 
