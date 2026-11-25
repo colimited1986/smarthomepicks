@@ -436,6 +436,11 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
         </div>
       </article>
 </section>
+<nav class="product-pagination" id="product-pagination" aria-label="Product pages" style="display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0" hidden>
+<button type="button" id="products-prev" aria-label="Previous page" style="border:1px solid #b9cbc5;border-radius:9px;background:#fff;padding:9px 13px;font:inherit;cursor:pointer">← Previous</button>
+<div id="product-page-numbers" style="display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center"></div>
+<button type="button" id="products-next" aria-label="Next page" class="primary" style="border:0;cursor:pointer">Next →</button>
+</nav>
 <p class="empty" id="empty-state">No products in this category.</p>
 </main>
 <footer><div class="footer-inner">
@@ -446,17 +451,41 @@ footer{background:#f3f7f5;border-top:1px solid var(--line);padding:25px 22px;col
 <script>
 (function(){
  const filter=document.getElementById('category-filter');
- const cards=[...document.querySelectorAll('.product-card')];
+ const cards=Array.from(document.querySelectorAll('.product-card'));
  const count=document.getElementById('product-count');
  const empty=document.getElementById('empty-state');
+ const pagination=document.getElementById('product-pagination');
+ const numbers=document.getElementById('product-page-numbers');
+ const prev=document.getElementById('products-prev');
+ const next=document.getElementById('products-next');
+ const perPage=9;
+ let page=0, filtered=cards.slice();
  function render(){
    const value=filter.value;
-   let shown=0;
-   cards.forEach(card=>{const match=value==='all'||card.dataset.category===value;card.hidden=!match;if(match)shown++;});
-   count.textContent='Showing '+shown+' of '+cards.length+' products';
-   empty.style.display=shown?'none':'block';
+   filtered=cards.filter(card=>value==='all'||card.dataset.category===value);
+   const pages=Math.max(1,Math.ceil(filtered.length/perPage));
+   if(page>=pages) page=pages-1;
+   cards.forEach(card=>card.hidden=true);
+   filtered.forEach((card,i)=>{card.hidden=!(i>=page*perPage&&i<(page+1)*perPage);});
+   count.textContent='Showing '+(filtered.length?Math.min(page*perPage+1,filtered.length):0)+'–'+Math.min((page+1)*perPage,filtered.length)+' of '+filtered.length+' products';
+   empty.style.display=filtered.length?'none':'block';
+   pagination.hidden=filtered.length<=perPage;
+   numbers.innerHTML='';
+   for(let i=0;i<pages;i++){
+     const b=document.createElement('button');
+     b.type='button'; b.textContent=String(i+1); b.setAttribute('aria-label','Page '+(i+1));
+     b.setAttribute('aria-current',i===page?'page':'false');
+     b.style.cssText='min-width:40px;border:1px solid '+(i===page?'#008f83':'#b9cbc5')+';border-radius:9px;padding:9px 12px;background:'+(i===page?'#008f83':'#fff')+';color:'+(i===page?'#fff':'#1b302e')+';font:inherit;font-weight:750;cursor:pointer';
+     b.addEventListener('click',()=>{page=i;render();document.getElementById('product-grid').scrollIntoView({behavior:'smooth',block:'start'});});
+     numbers.appendChild(b);
+   }
+   prev.disabled=page===0; next.disabled=page>=pages-1;
+   prev.style.opacity=prev.disabled?'.45':'1'; next.style.opacity=next.disabled?'.45':'1';
  }
- filter.addEventListener('change',render);
+ filter.addEventListener('change',()=>{page=0;render();});
+ prev.addEventListener('click',()=>{if(page>0){page--;render();}});
+ next.addEventListener('click',()=>{if(page<Math.ceil(filtered.length/perPage)-1){page++;render();}});
+ render();
 })();
 </script>
 
